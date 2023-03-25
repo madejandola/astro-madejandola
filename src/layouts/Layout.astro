@@ -26,12 +26,17 @@ import "@fontsource/alegreya-sc/400-italic.css";
 import "@fontsource/alegreya-sc/500.css";
 import "@fontsource/alegreya-sc/700.css";
 import Logo from "@/components/Icons/Logo.astro";
+import IconSearch from "@/components/Icons/IconSearch.astro";
+import IconFacebook from "@/components/Icons/IconFacebook.astro";
+import IconInstagram from "@/components/Icons/IconInstagram.astro";
 
 const {
   title,
   description,
   image = "https://res.cloudinary.com/srcouto/image/upload/v1674841906/bqxn/og-bqxn_pksmqq.jpg",
 } = Astro.props;
+
+const pathname = new URL(Astro.request.url).pathname;
 ---
 
 <html lang="es">
@@ -53,7 +58,7 @@ const {
       <Navigation />
     </Offcanvas>
     <header
-      class="fixed bg-white py-0.5 lg:py-3 top-0 left-0 flex justify-between right-0 z-40 backdrop-blur-lg lg:backdrop-blur-none"
+      class="fixed shadow-md bg-white/90 py-0.5 lg:py-2 top-0 left-0 flex justify-between right-0 z-50 backdrop-blur-sm"
     >
       <div class="flex items-center translate-x-6 md:-translate-x-1">
         <a href="/" rel="prefetch">
@@ -63,38 +68,35 @@ const {
       </div>
       <div class="hidden lg:flex items-center space-x-3 lg:pr-6">
         <Navigation />
-        <a>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z"
-              fill="currentColor"
-              class="fill-gray-800"></path>
-          </svg>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:opacity-80 group w-6 h-6"
+          href="https://www.facebook.com/madejandola/"
+        >
+          <IconFacebook />
         </a>
-        <a>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"
-              fill="currentColor"
-              class="fill-gray-800"></path>
-          </svg>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:opacity-80 group w-6 h-6"
+          href="https://www.instagram.com/madejandola//"
+        >
+          <IconInstagram />
         </a>
       </div>
     </header>
     <div data-pagefind-ignore>
       <slot />
     </div>
-    <Footer/>
+    <a
+      class="fixed bottom-0 z-40 right-0 m-3 bg-orange-200 p-3 rounded-full shadow-lg hover:bg-orange-400 text-orange-900 hover:text-orange-100 duration-300"
+      rel="prefetch"
+      href="/buscar"
+    >
+      <IconSearch />
+    </a>
+    <Footer />
 
     <style is:global>
       html,
@@ -128,7 +130,7 @@ const {
       }
 
       .btn {
-        @apply print:hidden inline-flex items-center justify-center px-4 py-2 font-mono uppercase text-xs md:text-base font-bold tracking-wide duration-300 bg-gray-200 border-0 rounded-md  cursor-pointer ring-0 bg-opacity-90 hover:ring-2 hover:bg-opacity-80 focus-visible:ring-2 shadow-lg hover:shadow focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus:ring-2 ring-gray-800;
+        @apply print:hidden inline-flex items-center justify-center px-4 py-2 font-sans uppercase text-xs md:text-base font-bold tracking-wide duration-300 bg-gray-200 border-0 rounded-md  cursor-pointer ring-0 bg-opacity-90 hover:ring-2 hover:bg-opacity-80 focus-visible:ring-2 shadow-lg hover:shadow focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus:ring-2 ring-gray-800;
       }
 
       .btn.red {
@@ -156,7 +158,11 @@ const {
       }
 
       article.prose h4 {
-        @apply flex justify-between pt-2 font-mono text-2xl font-normal;
+        @apply flex justify-between pt-2 font-sans text-2xl font-normal;
+      }
+
+      article.prose h3 {
+        @apply max-w-3xl mx-auto font-bold w-full flex justify-between pt-2 font-sans text-2xl;
       }
     </style>
   </body>

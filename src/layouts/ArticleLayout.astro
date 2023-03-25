@@ -8,7 +8,7 @@ type Props = MarkdownLayoutProps<{
   title: string;
   location?: string;
   featuredImage: string;
-  coauthor?: string;
+  coAuthor?: string;
 }>;
 
 // Now, `frontmatter`, `url`, and other Markdown layout properties
@@ -33,10 +33,10 @@ const { frontmatter } = Astro.props;
       <h1 class="text-4xl font-medium md:text-6xl">
         {frontmatter.title}
       </h1>
-      {frontmatter.coauthor && <p>frontmatter.coauthor</p>}
-      <h3 class="text-xl mt-2 font-medium md:text-xl">
+      <h3 class="text-xl my-2 font-medium md:text-xl">
         {frontmatter.location}
       </h3>
+      {frontmatter.coAuthor && <p class="uppercase text-sm mt-6">{frontmatter.coAuthor}</p>}
     </div>
   </div>
   <div class="pb-24 w-full mt-12 font-sans">
@@ -50,7 +50,7 @@ const { frontmatter } = Astro.props;
     fit="cover"
     format={"webp"}
     alt={frontmatter.title}
-    class="object-cover min-h-screen"
+    class="object-cover hidden min-h-screen"
     data-pagefind-meta="image[src]"
     src={frontmatter?.featuredImage}
   />

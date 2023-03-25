@@ -2,6 +2,8 @@
 import Layout from "@/layouts/Layout.astro";
 import HeroContact from "@/components/Heros/HeroContact.astro";
 import { Image } from "@astrojs/image/components";
+import IconFacebook from "../Icons/IconFacebook.astro";
+import IconInstagram from "../Icons/IconInstagram.astro";
 ---
 
 <Layout title="Contacto">
@@ -12,51 +14,34 @@ import { Image } from "@astrojs/image/components";
       class="w-full relative z-10 max-w-2xl p-6 mx-auto text-center rounded-md shadow-lg md:p-12 bg-zinc-100 text-zinc-900"
     >
       <h1
-        class="w-full mx-auto mb-8 font-mono text-4xl font-bold tracking-wider text-center text-zinc-900 md:text-6xl"
+        class="w-full mx-auto mb-8 font-sans text-4xl font-light uppercase tracking-wide text-center text-zinc-900 md:text-5xl"
       >
         Contacto
       </h1>
       <h3
-        class="w-full mx-auto mb-8 font-sans text-xl text-center text-zinc-900 md:text-2xl"
+        class="w-full mx-auto mb-8 font-sans text-lg text-center text-zinc-900 md:text-xl"
       >
         Podes contactarnos via mail o en cualquiera de nuestras redes sociales
       </h3>
       <div class="relative my-6 text-zinc-900">
         <p class="text-3xl select-all">madejandola@gmail.com</p>
       </div>
-      <div class="flex items-center justify-center space-x-3">
+      <div class="flex items-center justify-center space-x-9">
         <a
           target="_blank"
           rel="noopener noreferrer"
+          class="hover:opacity-80 group w-12 h-12"
           href="https://www.facebook.com/madejandola/"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-16 h-16"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            ><path
-              d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z"
-              fill="#888888"></path></svg
-          >
+          <IconFacebook class="text-lg" />
         </a>
         <a
           target="_blank"
           rel="noopener noreferrer"
+          class="hover:opacity-80 group w-12 h-12"
           href="https://www.instagram.com/madejandola//"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-16 h-16"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            ><path
-              fill="#888888"
-              d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"
-            ></path></svg
-          >
+          <IconInstagram />
         </a>
       </div>
     </div>

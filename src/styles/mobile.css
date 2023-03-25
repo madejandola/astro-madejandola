@@ -1,5 +1,5 @@
 .OffcanvasNav {
-  @apply fixed text-left overflow-y-auto shadow-2xl font-mono text-2xl top-0 bottom-0 bg-white text-gray-900 duration-700 sm:w-64 p-3 z-[1000] flex justify-start pt-12 flex-col;
+  @apply fixed text-left overflow-y-auto shadow-2xl font-sans text-2xl top-0 bottom-0 bg-white text-gray-900 duration-700 sm:w-64 p-3 z-[1000] flex justify-start pt-12 flex-col;
 }
 
 .OffcanvasNav nav {

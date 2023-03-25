@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import createSlug from "@/lib/createSlug";
+// import { getFormattedDate } from "@/lib/formatDate";
+
+export async function getStaticPaths() {
+  const video = await getCollection("perfiles");
+  return video
+    .filter((item: any) => item.data.privacyStatus === "public")
+    .map((video) => ({
+      params: { slug: createSlug(video.data.title) },
+      props: video,
+    }));
+}
+
+const { data, body, render } = Astro.props;
+const { Content } = await render();
+---
+
+<Layout title={data?.title} description={body} image={data?.featuredImage}>
+  <Content />
+</Layout>
+
+<style is:global>
+  .prose p {
+    @apply my-6 block mx-auto max-w-3xl;
+  }
+
+  .prose img {
+    @apply my-0;
+  }
+</style>

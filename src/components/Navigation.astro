@@ -18,16 +18,16 @@ const pathname = new URL(Astro.request.url).pathname;
     Tramas
   </a>
   <a
-    class={pathname === "/buscar"
-      ? "active"
-      : "" || pathname.includes("/buscar")
-      ? "active"
-      : ""}
-    rel="prefetch"
-    href="/buscar"
-  >
-    Buscar
-  </a>
+  class={pathname === "/perfiles"
+    ? "active"
+    : "" || pathname.includes("/perfiles")
+    ? "active"
+    : ""}
+  rel="prefetch"
+  href="/perfiles"
+>
+  Perfiles
+</a>
   <a
     class={pathname === "/aliados"
       ? "active"

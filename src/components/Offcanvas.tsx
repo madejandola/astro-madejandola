@@ -32,7 +32,7 @@ export default function Offcanvas({
           onClick={toggleChecked}
           className="right-2 offcanvasBtn cursor-pointer lg:hidden fixed text-lg justify-center items-center opacity-80 rounded-md overflow-hidden hover:opacity-100 p-0.5 bg-gray-200/80 hover:bg-gray-200/90 duration-1000 font-medium text-gray-900  z-[60] flex top-4"
         >
-          <span className="pl-3 pr-2 font-mono uppercase">Menú</span>
+          <span className="pl-3 pr-2 font-sans uppercase">Menú</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
