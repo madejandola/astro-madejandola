@@ -20,7 +20,7 @@ html {
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  @apply bg-white;
+  @apply bg-gray-900;
   opacity: 0;
 }
 

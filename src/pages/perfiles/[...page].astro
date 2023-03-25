@@ -23,7 +23,7 @@ const currentPage = page.currentPage ?? 1;
     >
       Perfiles
     </h1>
-    <p class="max-w-2xl text-xl text-center mx-auto">
+    <p class="max-w-5xl mb-6 text-lg text-center mx-auto">
       A lo largo de 6 años de trabajo, MadejándoLA ha generado una red de
       proyectos que acompañan su camino. Esta lista está compuesta de proyectos
       productivos tanto de diseñadores como de colectivos de artesanxs, espacios
@@ -42,7 +42,7 @@ const currentPage = page.currentPage ?? 1;
           <a
             href={`/perfiles/${createSlug(data?.title)}`}
             rel="prefetch"
-            class="relative h-64 w-full flex ring-slate-800 flex-col items-center ring  shadow-xl justify-center hover:ring-sky-800 overflow-hidden bg-gray-800  rounded-lg group duration-300"
+            class="relative h-64 w-full flex ring-amber-100 flex-col items-center ring  shadow-xl justify-center hover:ring-amber-600 overflow-hidden bg-gray-100 rounded-lg group duration-300"
           >
             <div class="z-20 relative  duration-700">
               <div class=" animate__fadeIn animate__animated bg-gray-900 animate__delay-1s">
@@ -65,7 +65,7 @@ const currentPage = page.currentPage ?? 1;
                 {data?.title}
               </span>
             </div>
-            <div class="inset-0 z-10 absolute flex w-full h-full bg-gray-900 justify-center items-center">
+            <div class="inset-0 z-10 absolute flex w-full h-full bg-gray-100 justify-center items-center">
               <div class="!opacity-30 spinner">
                 <span />
                 <span />

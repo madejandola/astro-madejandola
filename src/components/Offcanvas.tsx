@@ -17,6 +17,14 @@ export default function Offcanvas({ children }: { children: any }) {
       <div>
         <button
           type="button"
+          onClick={closeModal}
+          aria-label="Backdrop"
+          className={`${
+            !show ? "opacity-0 select-none pointer-events-none" : "opacity-100 pointer-events-auto"
+          } fixed inset-0 bg-gray-900/60 duration-300 backdrop-blur w-full z-[60]`}
+        />
+        <button
+          type="button"
           onClick={toggleChecked}
           className="right-2 offcanvasBtn cursor-pointer lg:hidden fixed text-lg justify-center items-center opacity-80 rounded-md overflow-hidden hover:opacity-100 p-0.5 bg-gray-200/80 hover:bg-gray-200/90 duration-1000 font-medium text-gray-900  z-[60] flex top-4"
         >
@@ -39,7 +47,9 @@ export default function Offcanvas({ children }: { children: any }) {
         <div
           onClick={closeModal}
           className={`OffcanvasNav OffcanvasNavRight ${
-            !show ? "translate-x-full" : "translate-x-0"
+            !show
+              ? "translate-x-full pointer-events-none"
+              : "translate-x-0 pointer-events-auto"
           } `}
         >
           <button
