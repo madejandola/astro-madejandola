@@ -96,7 +96,16 @@ declare module 'astro:content' {
 	>;
 
 	const entryMap: {
-		"tramas": {
+		"perfiles": {
+"mariana-rivera-militante-de-hilo-y-tela.mdx": {
+  id: "mariana-rivera-militante-de-hilo-y-tela.mdx",
+  slug: "mariana-rivera-militante-de-hilo-y-tela",
+  body: string,
+  collection: "perfiles",
+  data: InferEntrySchema<"perfiles">
+} & { render(): Render[".mdx"] },
+},
+"tramas": {
 "el-huipil.mdx": {
   id: "el-huipil.mdx",
   slug: "el-huipil",

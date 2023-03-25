@@ -18,7 +18,7 @@ const { page } = Astro.props;
 const currentPage = page.currentPage ?? 1;
 ---
 
-<Layout title={`Videos ${currentPage > 1 ? `— página ${currentPage} ` : ""}`}>
+<Layout title={`Tramas ${currentPage > 1 ? `— página ${currentPage} ` : ""}`}>
   <main class="py-12 gap-6 flex flex-col">
     <h1
       class="text-6xl mt-16 mb-6 font-sans w-full text-center md:text-left max-w-6xl mx-auto"
