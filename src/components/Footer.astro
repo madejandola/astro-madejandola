@@ -1,0 +1,109 @@
+---
+import { Image } from "@astrojs/image/components";
+import LogoXl from "./Icons/Logo-xl.astro";
+---
+
+<div class="pt-24 bg-gray-100 sm:pt-0">
+  <footer class="p-4 bg-white sm:p-6">
+    <div
+      class="flex flex-col items-center justify-center w-full max-w-6xl pt-6 mx-auto"
+    >
+      <div class="grid w-full gap-8 text-center sm:grid-cols-3 sm:gap-6">
+        <div class="flex items-center justify-center">
+          <LogoXl />
+        </div>
+        <div class="flex flex-col items-start justify-start text-left">
+          <h2 class="mb-6 text-lg font-semibold text-gray-900 uppercase">
+            Doná
+          </h2>
+          <p class="py-3 text-lg text-gray-600 md:py-0 md:pb-3">
+            ¿Te gusta lo que hacemos? Puedes ayudarnos a contar más historias
+            donando a Madejándola. Con tu dinero podremos gestionar viajes,
+            pagar a nuestros colaboradores y sostener el mantenimiento y
+            actualización del sitio.
+          </p>
+        </div>
+        <div class="grid gap-5 text-left sm:grid-cols-2">
+          <div>
+            <h2 class="mb-6 text-lg font-semibold text-gray-900 uppercase">
+              Seguinos
+            </h2>
+            <ul class="text-gray-600">
+              <li class="py-3 text-lg md:py-0 md:pb-3">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.instagram.com/madejandola/"
+                  class="transition duration-150 ease-in-out hover:text-accents-6 hover:font-bold"
+                  >Instagram</a
+                >
+              </li>
+              <li class="py-3 text-lg md:py-0 md:pb-3">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.facebook.com/madejandola/"
+                  class="transition duration-150 ease-in-out hover:text-accents-6 hover:font-bold"
+                  >Facebook</a
+                >
+              </li>
+              <li class="py-3 text-lg md:py-0 md:pb-3">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://vimeo.com/contarloshilos"
+                  class="transition duration-150 ease-in-out hover:text-accents-6 hover:font-bold"
+                  >Vimeo</a
+                >
+              </li>
+              <li class="py-3 text-lg md:py-0 md:pb-3">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://soundcloud.com/contarloshilos"
+                  class="transition duration-150 ease-in-out hover:text-accents-6 hover:font-bold"
+                  >Soundcloud</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-lg font-semibold text-gray-900 uppercase">
+              Madejandola
+            </h2>
+            <ul class="text-gray-600">
+              <li class="py-3 text-lg md:py-0 md:pb-3">
+                <a
+                  href="/tramas"
+                  class="transition duration-150 ease-in-out hover:text-accents-6 hover:font-bold"
+                  >Tramas</a
+                >
+              </li>
+              <li class="py-3 text-lg md:py-0 md:pb-3">
+                <a
+                  href="/perfiles"
+                  class="transition duration-150 ease-in-out hover:text-accents-6 hover:font-bold"
+                  >Perfiles</a
+                >
+              </li>
+              <li class="py-3 text-lg md:py-0 md:pb-3">
+                <a
+                  href="/aliados"
+                  class="transition duration-150 ease-in-out hover:text-accents-6 hover:font-bold"
+                  >La Red</a
+                >
+              </li>
+              <li class="py-3 text-lg md:py-0 md:pb-3"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+  <div class="sm:flex sm:items-center sm:justify-center">
+    <span class="text-sm text-gray-500 sm:text-center"
+      >© 2022 Madejandola. Todos los derechos reservados.
+    </span>
+  </div>
+</div>

@@ -1,0 +1,152 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+import HeroContact from "@/components/Heros/HeroContact.astro";
+
+export const TRAMAS = [
+  {
+    title: "Tradición Telera",
+    slug: "tradicion-telera",
+    ariaLabel: "ir a Tradición telera",
+    image:
+      "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-002.jpg",
+  },
+  {
+    title: "Volver al telar",
+    slug: "volver-al-telar",
+    ariaLabel: "ir a Volver al telar",
+    image:
+      "https://i0.wp.com/madejandola.com/wp-content/uploads/2019/09/Volver-al-Telar-portada.jpg",
+  },
+  {
+    title: "El Huipil",
+    slug: "el-huipil",
+    ariaLabel: "ir a El Huipil",
+    image:
+      "https://i2.wp.com/madejandola.com/wp-content/uploads/2019/09/opt-el-huipil-002.jpg",
+  },
+  {
+    title: "Flor de Naupan",
+    slug: "flor-de-naupan",
+    ariaLabel: "ir a Flor de Naupan",
+    image:
+      "https://i0.wp.com/madejandola.com/wp-content/uploads/2019/09/Flor-de-Naupan-portada.jpg",
+  },
+  {
+    title: "Sabiduría de la Selva",
+    slug: "sabiduria-de-la-selva",
+    ariaLabel: "ir a Sabiduría de la Selva",
+    image:
+      "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/sabiduria-de-la-selva-027.jpg",
+  },
+  {
+    title: "Grecas del olvido",
+    slug: "grecas-del-olvido",
+    ariaLabel: "ir a Grecas del olvido",
+    image:
+      "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/Grecas-de-Olvido-portada.jpg",
+  },
+];
+---
+
+<Layout title="Inicio">
+  <main
+    class="flex flex-col w-full min-h-screen max-w-screen overscroll-auto scroll-smooth"
+  >
+    <div
+      class="relative flex items-center justify-center w-full min-h-screen px-3 overflow-hidden bg-gray-900"
+    >
+      <div
+        class="relative z-10 flex flex-col items-center justify-center w-full max-w-3xl p-6"
+      >
+        <div class="lg:px-0">
+          <h2
+            class="mb-6 font-sans text-3xl text-center text-white md:text-5xl"
+          >
+            Sumérgete en un universo lleno de historias que nacen en los hilos
+            de América Latina
+          </h2>
+        </div>
+        <a href="/tramas" class="btn red"> Explorar trama</a>
+      </div>
+      <div class="absolute inset-0 z-0 opacity-40">
+        <Image
+          alt="Madejandola"
+          width={1600}
+          height={1300}
+          class="object-cover h-screen"
+          src="https://res.cloudinary.com/djoqdhbiv/image/upload/q_auto:eco/v1664335751/web/ImagenesFondo/legado-dona-santa-009_b0pqmb.jpg"
+        />
+      </div>
+    </div>
+    <div id="content" class="w-full min-h-screen">
+      <div
+        class="grid w-full max-w-full gap-2 p-2 mx-auto sm:grid-cols-2 md:grid-cols-4"
+      >
+        {
+          TRAMAS.map((route, i) => {
+            return (
+              <a
+                href={`/tramas/${route.slug}`}
+                class="w-full relative flex justify-center items-center group overflow-hidden h-[50vh] bg-gray-900"
+              >
+                <div class=" z-10 m-3 duration-300 opacity-100 bottom-3 left-3 group-hover:opacity-0">
+                  <h2 class="text-3xl text-white ">{route.title}</h2>
+                  <div class="text-white">Explorar</div>
+                </div>
+                <div class="duration-300 absolute inset-0 opacity-30 group-hover:opacity-100">
+                  <Image
+                    alt={route.slug}
+                    src={route.image}
+                    class="object-cover h-[50vh] w-full"
+                    height={1000}
+                    width={1000}
+                  />
+                </div>
+              </a>
+            );
+          })
+        }
+        <a
+          href="/tramas"
+          class="w-full h-[50vh] bg-red-600 col-span-2 flex justify-center items-center text-lg text-white hover:bg-red-500"
+        >
+          Explorar tramas
+        </a>
+      </div>
+    </div>
+    <div
+      class="relative flex items-center justify-center w-full min-h-screen bg-white"
+      id="sobre-el-proyecto"
+    >
+      <div
+        class="relative z-10 flex flex-col items-center justify-center w-full max-w-2xl p-6 bg-white rounded shadow-lg"
+      >
+        <div class="flex flex-col items-center justify-center lg:px-0">
+          <h2 class="mt-6 mb-6 font-sans text-3xl font-bold text-center">
+            Somos un proyecto que busca contar las historias detrás de los hilos de Latinoamérica.
+          </h2>
+          <p class="mb-6 text-lg text-center">
+            A través de narrativas fotográficas y audiovisuales
+            queremos compartir los encuentros que a lo largo de años hemos
+            tenido con tejedorxs y bordadorxs de distintos puntos del
+            continente y así, contagiar nuestra pasión por las
+            tradiciones textiles.
+          </p>
+          <a href="/sobre-madejandola" class="btn yellow">Conocer más</a>
+        </div>
+      </div>
+      <div class="absolute inset-0">
+        <Image
+          alt="Madejandola"
+          width={1600}
+          height={800}
+          src="https://res.cloudinary.com/djoqdhbiv/image/upload/v1679669590/web/ImagenesFondo/del-campo-a-la-ciudad-011_iizpea.jpg"
+        />
+      </div>
+    </div>
+    <div class="relative w-full min-h-screen bg-gray-900 overflow-hidden" id="contacto">
+      <HeroContact />
+    </div>
+  </main>
+</Layout>

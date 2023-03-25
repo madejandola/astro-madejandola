@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import PageFindSearch from "../components/PageFind/PageFindSearch.astro";
+import BlogList from "../components/PageFind/List.astro";
+import HeroContact from "@/components/Heros/HeroContact.astro";
+const allVideos = await getCollection("tramas");
+---
+
+<Layout title="Contacto">
+  <div class="bg-gray-900">
+    <HeroContact/>
+  </div>
+</Layout>

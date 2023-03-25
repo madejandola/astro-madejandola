@@ -1,0 +1,16 @@
+---
+import { GALERIA3 } from "./constants.ts";
+import ImageLightbox from "@/components/ImageLightbox/ImageLightbox.astro";
+---
+
+<div class="grid md:grid-cols-4 gap-0.5">
+  {
+    GALERIA3.map((i) => {
+      return (
+        <div class={`h-64 overflow-hidden w-full ${i.class}`}>
+          <ImageLightbox alt={i.title} src={i.image} />
+        </div>
+      );
+    })
+  }
+</div>

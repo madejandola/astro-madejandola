@@ -1,0 +1,28 @@
+.OffcanvasNav {
+  @apply fixed text-left overflow-y-auto shadow-2xl font-mono text-2xl top-0 bottom-0 bg-white text-gray-900 duration-700 sm:w-64 p-3 z-[1000] flex justify-start pt-12 flex-col;
+}
+
+.OffcanvasNav nav {
+  @apply flex flex-col space-y-6 px-0
+}
+
+.OffcanvasNavLeft {
+  @apply left-0;
+}
+
+.OffcanvasNavRight {
+  @apply right-0;
+}
+
+.OffcanvasNav a.inicio {
+  @apply hover:text-amber-400;
+}
+
+.OffcanvasNav a.recursos {
+  @apply hover:text-red-400;
+}
+
+.OffcanvasNav a.galeria {
+  @apply hover:text-blue-400;
+}
+

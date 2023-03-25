@@ -1,0 +1,74 @@
+---
+import { getCollection } from "astro:content";
+import SwiperOpt from "../components/SwiperOpt.astro";
+// import VideoGridSwiper from "../components/VideoGridSwiper";
+import Layout from "../layouts/Layout.astro";
+
+const allVideos = await getCollection("tramas");
+const recentVideos = [...allVideos]
+  .filter((item: any) => item.data.privacyStatus === "public")
+  .sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime())
+  .slice(0, 8);
+
+// const categoryXacobeo = ["xacobeo"];
+// const filters2 = ["FESTA DO PICO"];
+// const filters3 = ["carlos nuñez"];
+// const filters4 = ["RUADA EN BOS AIRES"];
+
+// const getXacobeo = allVideos
+//   .sort((a, b) => a.data.publishedAt.getTime() - b.data.publishedAt.getTime())
+//   .filter((person) =>
+//     categoryXacobeo.every((filter) => person.data.category?.includes(filter))
+//   )
+//   .slice(0, 5);
+
+// const festaPico = allVideos
+//   .sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime())
+//   .filter((person) =>
+//     filters2.every((filter) => person.data.tags?.includes(filter))
+//   )
+//   .slice(0, 8);
+
+// const getCarlos = allVideos
+//   .sort((a, b) => a.data.publishedAt.getTime() - b.data.publishedAt.getTime())
+//   .filter((person) =>
+//     filters3.every((filter) => person.data.tags?.includes(filter))
+//   )
+//   .slice(0, 8);
+
+// const getRuada = allVideos
+//   .sort((a, b) => a.data.publishedAt.getTime() - b.data.publishedAt.getTime())
+//   .filter((person) =>
+//     filters4.every((filter) => person.data.tags?.includes(filter))
+//   )
+//   .slice(0, 8);
+---
+
+<Layout title="Inicio">
+  <div class="relative z-20 max-w-6xl py-24 mx-auto lg:py-32">
+    <!-- <h2
+      class="mt-0 mb-3 font-mono text-2xl md:text-4xl text-left animate__fadeIn animate__animated"
+    >
+      Más recientes
+    </h2>
+    <SwiperOpt videos={recentVideos} /> -->
+    <!-- <h2
+      class="mt-6 mb-3 font-mono text-2xl md:text-4xl text-left animate__fadeIn animate__animated"
+    >
+      Festa do Pico
+    </h2>
+    <SwiperOpt videos={festaPico} />
+    <h2
+      class="mt-6 mb-3 font-mono text-2xl md:text-4xl text-left animate__fadeIn animate__animated"
+    >
+      Carlos Nuñez
+    </h2>
+    <SwiperOpt videos={getCarlos} />
+    <h2
+      class="mt-6 mb-3 font-mono text-2xl md:text-4xl text-left animate__fadeIn animate__animated"
+    >
+      Ruada en Bos Aires
+    </h2>
+    <SwiperOpt videos={getRuada} /> -->
+  </div>
+</Layout>

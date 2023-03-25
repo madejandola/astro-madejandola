@@ -1,0 +1,78 @@
+---
+// remove the first "/"
+// const currentPath = pathname.slice(1);
+const pathname = new URL(Astro.request.url).pathname;
+---
+
+<nav aria-label="Top">
+  <a class={pathname === "/" ? "active" : ""} rel="prefetch" href="/">Inicio</a>
+  <a
+    class={pathname === "/tramas"
+      ? "active"
+      : "" || pathname.includes("/tramas")
+      ? "active"
+      : ""}
+    rel="prefetch"
+    href="/tramas"
+  >
+    Tramas
+  </a>
+  <a
+    class={pathname === "/buscar"
+      ? "active"
+      : "" || pathname.includes("/buscar")
+      ? "active"
+      : ""}
+    rel="prefetch"
+    href="/buscar"
+  >
+    Buscar
+  </a>
+  <a
+    class={pathname === "/aliados"
+      ? "active"
+      : "" || pathname.includes("/aliados")
+      ? "active"
+      : ""}
+    rel="prefetch"
+    href="/aliados"
+  >
+    La Red
+  </a>
+  <a
+    class={pathname === "/sobre-madejandola"
+      ? "active"
+      : "" || pathname.includes("/sobre-madejandola")
+      ? "active"
+      : ""}
+    rel="prefetch"
+    href="/sobre-madejandola"
+  >
+    Sobre Madejandola
+  </a>
+  <a
+    class={pathname === "/contacto"
+      ? "active"
+      : "" || pathname.includes("/contacto")
+      ? "active"
+      : ""}
+    rel="prefetch"
+    href="/contacto"
+  >
+    Contacto
+  </a>
+</nav>
+
+<style>
+  nav {
+    @apply mx-auto pr-12 px-4 gap-x-6 w-full flex justify-between items-center;
+  }
+
+  nav a {
+    @apply text-lg text-left hover:text-orange-600 duration-300 font-bold text-gray-900  font-sans;
+  }
+
+  nav a.active {
+    @apply text-orange-600;
+  }
+</style>

@@ -1,0 +1,14 @@
+---
+import Item from "./ListItem.astro";
+const { posts } = Astro.props;
+---
+
+<ul>
+  {
+    posts.map((post) => (
+      <li class="">
+        <Item post={post} />
+      </li>
+    ))
+  }
+</ul>

@@ -1,0 +1,31 @@
+---
+import IconDoubleChevronLeft from "@/components/Icons/IconDoubleChevronLeft.astro";
+import IconChevronLeft from "@/components/Icons/IconChevronLeft.astro";
+import IconChevronRight from "@/components/Icons/IconChevronRight.astro";
+import IconDoubleChevronRight from "@/components/Icons/IconDoubleChevronRight.astro";
+const {
+  prevUrl,
+  nextUrl,
+  prevText = "nuevos",
+  nextText = "anteriores",
+} = Astro.props;
+---
+
+{
+  (prevUrl || nextUrl) && (
+    <div class="max-w-3xl mx-auto w-full">
+      <div class="flex my-6 justify-center gap-6 items-center">
+        <a href={prevUrl} class={`btn flex justify-center items-center ghost ${!prevUrl ? "invisible" : ""}`}>
+          <IconChevronLeft  class="w-3 h-3"/>
+          <span class="mt-0.5 mr-1 md:inline-block hidden">videos</span>
+          <span class="mt-0.5">{prevText}</span>
+        </a>
+        <a href={nextUrl} class={`btn flex justify-center items-center ghost  ${!nextUrl ? "invisible" : ""}`}>
+          <span class="mt-0.5 mr-1 md:inline-block hidden">videos</span>
+          <span class="mt-0.5">{nextText}</span>
+          <IconChevronRight  class="w-3 h-3"/>
+        </a>
+      </div>
+    </div>
+  )
+}

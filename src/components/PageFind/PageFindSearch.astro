@@ -1,0 +1,32 @@
+<div id="search" class="p-6 "></div>
+
+<script>
+  window.addEventListener("DOMContentLoaded", (event) => {
+    new PagefindUI({
+      element: "#search",
+      debounceTimeoutMs: 500,
+      resetStyles: false,
+      translations: {
+        placeholder: "Buscar",
+        zero_results: "No se encontró el término [SEARCH_TERM]",
+        clear_search: "Limpiar búsqueda",
+        load_more: "Cargar más resultados",
+        search_label: "Buscar en este sitio",
+        filters_label: "Filtros",
+        many_results: "[COUNT] resultados para [SEARCH_TERM]",
+        one_result: "[COUNT] resultado para [SEARCH_TERM]",
+        alt_search:
+          "Sin resultados para [SEARCH_TERM]. Mostrando en su lugar sobre [DIFFERENT_TERM]",
+        search_suggestion:
+          "Sin resultados para [SEARCH_TERM]. Pruebe con alguna alternativa",
+        searching: "Buscando para [SEARCH_TERM]...",
+      },
+    });
+  });
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "/" || event.key === ".") {
+      event.preventDefault();
+      document.querySelector("div#search input").focus();
+    }
+  });
+</script>

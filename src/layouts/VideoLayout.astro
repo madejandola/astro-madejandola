@@ -1,0 +1,46 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+import { Image } from "@astrojs/image/components";
+
+type Props = MarkdownLayoutProps<{
+  // Define frontmatter props here
+  title: string;
+  author: string;
+  featuredImage: string;
+  featuredVideo: string;
+}>;
+
+// Now, `frontmatter`, `url`, and other Markdown layout properties
+// are accessible with type safety
+const { frontmatter, url } = Astro.props;
+---
+
+<div data-pagefind-body class="min-h-screen bg-gray-900 w-full">
+  <div class="max-w-4xl mx-auto py-24">
+    <iframe
+      title="vimeo-player"
+      src={frontmatter.featuredVideo}
+      width="100%"
+      height="540"
+      class="aspect-video"
+      allowfullscreen
+    >
+    </iframe>
+    <h1 class="text-white max-w-3xl mx-auto text-3xl pt-6 px-6">
+      {frontmatter.title}
+    </h1>
+    <div class="px-6 prose prose-invert max-w-3xl mx-auto prose-lg md:prose-xl">
+      <slot />
+    </div>
+  </div>
+  <Image
+    height={187}
+    width={280}
+    fit="cover"
+    format={("webp")}
+    alt={frontmatter.title}
+    class="hidden"
+    data-pagefind-meta="image[src]"
+    src={frontmatter?.featuredImage}
+  />
+</div>

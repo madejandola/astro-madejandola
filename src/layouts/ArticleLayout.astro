@@ -1,0 +1,57 @@
+---
+import { Image } from "@astrojs/image/components";
+import { getFormattedDate } from "@/lib/formatDate";
+import type { MarkdownLayoutProps } from "astro";
+
+type Props = MarkdownLayoutProps<{
+  // Define frontmatter props here
+  title: string;
+  location?: string;
+  featuredImage: string;
+  coauthor?: string;
+}>;
+
+// Now, `frontmatter`, `url`, and other Markdown layout properties
+// are accessible with type safety
+const { frontmatter } = Astro.props;
+---
+
+<div data-pagefind-body class="min-h-screen z-0">
+  <div class="min-h-screen flex justify-center bg-gray-900 items-center">
+    <div class="absolute inset-0 z-0 opacity-30 max-h-screen overflow-hidden">
+      <Image
+        height={1000}
+        width={1600}
+        fit="cover"
+        format={"webp"}
+        alt={frontmatter.title}
+        class="object-cover min-h-screen"
+        src={frontmatter?.featuredImage}
+      />
+    </div>
+    <div class="relative text-center text-white z-40">
+      <h1 class="text-4xl font-medium md:text-6xl">
+        {frontmatter.title}
+      </h1>
+      {frontmatter.coauthor && <p>frontmatter.coauthor</p>}
+      <h3 class="text-xl mt-2 font-medium md:text-xl">
+        {frontmatter.location}
+      </h3>
+    </div>
+  </div>
+  <div class="pb-24 w-full mt-12 font-sans">
+    <article class="prose prose-lg max-w-full md:prose-xl">
+      <slot />
+    </article>
+  </div>
+  <Image
+    height={187}
+    width={280}
+    fit="cover"
+    format={"webp"}
+    alt={frontmatter.title}
+    class="object-cover min-h-screen"
+    data-pagefind-meta="image[src]"
+    src={frontmatter?.featuredImage}
+  />
+</div>
