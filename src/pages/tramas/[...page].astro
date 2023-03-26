@@ -6,6 +6,7 @@ import createSlug from "@/lib/createSlug";
 import { getFormattedDate } from "@/lib/formatDate";
 import { Image, Picture } from "@astrojs/image/components";
 import YoutubeLoader from "@/components/YoutubeLoader.astro";
+import IconPlayVideo from "@/components/Icons/IconPlayVideo.astro";
 
 export async function getStaticPaths({ paginate }: any) {
   const videos = await getCollection("tramas");
@@ -52,11 +53,16 @@ const currentPage = page.currentPage ?? 1;
                 />
               </div>
             </div>
-            <div class="absolute animate__fadeIn animate__animated animate__delay-1s justify-end items-end bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/60 inset-0 z-30 flex flex-col p-3">
+            <div class="absolute animate__fadeIn animate__animated animate__delay-1s justify-end items-start bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/60 inset-0 z-30 flex flex-col p-3">
               <span class="p-2 pb-4 hover:underline underline-offset-4 font-sans text-2xl font-bold text-left text-white duration-700  line-clamp-3">
                 {data?.title}
               </span>
             </div>
+            {data.featuredVideo &&
+               <div class="absolute w-20 h-20 inset-0 z-20">
+              <IconPlayVideo/>
+                </div>
+            }
             <div class="inset-0 z-10 absolute flex w-full h-full bg-gray-100 justify-center items-center">
               <div class="!opacity-30 spinner">
                 <span />
