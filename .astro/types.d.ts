@@ -113,6 +113,48 @@ declare module 'astro:content' {
   collection: "tramas",
   data: InferEntrySchema<"tramas">
 } & { render(): Render[".mdx"] },
+"flor-de-naupan.mdx": {
+  id: "flor-de-naupan.mdx",
+  slug: "flor-de-naupan",
+  body: string,
+  collection: "tramas",
+  data: InferEntrySchema<"tramas">
+} & { render(): Render[".mdx"] },
+"grecas-de-olvido.mdx": {
+  id: "grecas-de-olvido.mdx",
+  slug: "grecas-de-olvido",
+  body: string,
+  collection: "tramas",
+  data: InferEntrySchema<"tramas">
+} & { render(): Render[".mdx"] },
+"mi-blusa-de-tlahui.mdx": {
+  id: "mi-blusa-de-tlahui.mdx",
+  slug: "mi-blusa-de-tlahui",
+  body: string,
+  collection: "tramas",
+  data: InferEntrySchema<"tramas">
+} & { render(): Render[".mdx"] },
+"neuquen-sentir-el-textil-mapuche.mdx": {
+  id: "neuquen-sentir-el-textil-mapuche.mdx",
+  slug: "neuquen-sentir-el-textil-mapuche",
+  body: string,
+  collection: "tramas",
+  data: InferEntrySchema<"tramas">
+} & { render(): Render[".mdx"] },
+"sabiduria-de-la-selva.mdx": {
+  id: "sabiduria-de-la-selva.mdx",
+  slug: "sabiduria-de-la-selva",
+  body: string,
+  collection: "tramas",
+  data: InferEntrySchema<"tramas">
+} & { render(): Render[".mdx"] },
+"tepenrihi-tstipekua.mdx": {
+  id: "tepenrihi-tstipekua.mdx",
+  slug: "tepenrihi-tstipekua",
+  body: string,
+  collection: "tramas",
+  data: InferEntrySchema<"tramas">
+} & { render(): Render[".mdx"] },
 "tradicion-telera.mdx": {
   id: "tradicion-telera.mdx",
   slug: "tradicion-telera",
