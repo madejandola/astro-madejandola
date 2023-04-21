@@ -1,0 +1,27 @@
+---
+import { Image } from "@astrojs/image/components";
+
+const { images } = Astro.props;
+---
+
+<div class="mx-auto" id="myCarousel1">
+  {
+    images.map((i) => {
+      return (
+        <div
+          class="slide"
+        >
+          <Image
+            alt={i}
+            src={i}
+            width={1600}
+            height={1280}
+            class="object-cover w-full"
+            format="webp"
+          />
+        </div>
+      );
+    })
+  }
+</div>
+

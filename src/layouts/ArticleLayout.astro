@@ -1,7 +1,6 @@
 ---
 import { Image } from "@astrojs/image/components";
 import type { MarkdownLayoutProps } from "astro";
-// import FancyCarousel from "@/components/Carousel/FancyCarousel.astro";
 
 type Props = MarkdownLayoutProps<{
   // Define frontmatter props here
@@ -61,39 +60,3 @@ const { frontmatter } = Astro.props;
   />
 </div>
 
-<script>
-  import { Fancybox } from "@fancyapps/ui";
-
-  function initFancyBoxOnDivImages(divId: string): void {
-    const divElement = document.getElementById(divId);
-    if (!divElement) return;
-
-    const images = divElement.getElementsByTagName("img");
-    const imageGallery: { src: string; type: string }[] = [];
-
-    for (let i = 0; i < images.length; i++) {
-      const image = images[i];
-      if (image) {
-        imageGallery.push({ src: image.src, type: "image" });
-        image.dataset.fancyboxIndex = i.toString();
-
-        image.addEventListener("click", (event) => {
-          const target = event.target as HTMLImageElement;
-          if (target) {
-            const clickedImageIndex = parseInt(
-              target.dataset.fancyboxIndex,
-              10
-            );
-            Fancybox.show(imageGallery, { startIndex: clickedImageIndex });
-          }
-        });
-      }
-    }
-  }
-
-  initFancyBoxOnDivImages("article");
-
-  Fancybox.bind("[data-fancybox]", {
-    // Your custom options
-  });
-</script>
