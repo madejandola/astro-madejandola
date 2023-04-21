@@ -6,45 +6,52 @@ import HeroContact from "@/components/Heros/HeroContact.astro";
 export const TRAMAS = [
   {
     title: "Tradición Telera",
-    slug: "tradicion-telera",
+    slug: "/tramas/tradicion-telera",
     ariaLabel: "ir a Tradición telera",
     image:
       "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-002.jpg",
   },
   {
     title: "Volver al telar",
-    slug: "volver-al-telar",
+    slug: "/tramas/volver-al-telar",
     ariaLabel: "ir a Volver al telar",
     image:
       "https://i0.wp.com/madejandola.com/wp-content/uploads/2019/09/Volver-al-Telar-portada.jpg",
   },
   {
     title: "El Huipil",
-    slug: "el-huipil",
+    slug: "/tramas/el-huipil",
     ariaLabel: "ir a El Huipil",
     image:
       "https://i2.wp.com/madejandola.com/wp-content/uploads/2019/09/opt-el-huipil-002.jpg",
   },
   {
     title: "Flor de Naupan",
-    slug: "flor-de-naupan",
+    slug: "/tramas/flor-de-naupan",
     ariaLabel: "ir a Flor de Naupan",
     image:
       "https://i0.wp.com/madejandola.com/wp-content/uploads/2019/09/Flor-de-Naupan-portada.jpg",
   },
   {
     title: "Sabiduría de la Selva",
-    slug: "sabiduria-de-la-selva",
+    slug: "/tramas/sabiduria-de-la-selva",
     ariaLabel: "ir a Sabiduría de la Selva",
     image:
       "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/sabiduria-de-la-selva-027.jpg",
   },
   {
     title: "Grecas del olvido",
-    slug: "grecas-de-olvido",
+    slug: "/tramas/grecas-de-olvido",
     ariaLabel: "ir a Grecas del olvido",
     image:
       "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/Grecas-de-Olvido-portada.jpg",
+  },
+  {
+    title: "Mariana Rivera: Militante de Hilo y Tela",
+    slug: "/perfiles/mariana-rivera-militante-de-hilo-y-tela",
+    ariaLabel: "ir a Mariana Rivera: Militante de Hilo y Tela",
+    image:
+      "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679784537/web/Perfiles/Mariana/mariana-rivera_faqenj.jpg",
   },
 ];
 ---
@@ -87,7 +94,7 @@ export const TRAMAS = [
           TRAMAS.map((route, i) => {
             return (
               <a
-                href={`/tramas/${route.slug}`}
+                href={`${route.slug}`}
                 class="w-full relative flex justify-start items-end group overflow-hidden h-[50vh] bg-gray-900"
               >
                 <div class=" z-10 m-3 duration-300 lg:opacity-0 bottom-3 left-3 group-hover:opacity-100">
@@ -111,10 +118,10 @@ export const TRAMAS = [
         }
         <a
           href="/tramas"
-          class="w-full h-[50vh] bgPattern bg-red-600 text-center bg-fixed sm:col-span-2 flex justify-center font-sans text-3xl items-center text-white hover:bg-red-500"
+          class="w-full h-[50vh] bgPattern bg-red-600 text-center bg-fixed  flex justify-center font-sans text-3xl items-center text-white hover:bg-red-500"
           style="background-size: 150px;"
         >
-          Explorar todas <br/> la tramas
+          Explorar todas <br /> la tramas
         </a>
       </div>
     </div>

@@ -7,10 +7,8 @@ featuredImage: https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276865/web
 privacyStatus: public
 ---
 
-import Gallery1 from "@/components/Tramas/tradicion-telera/gallery1.astro";
-import Gallery2 from "@/components/Tramas/tradicion-telera/gallery2.astro";
-import Gallery3 from "@/components/Tramas/tradicion-telera/gallery3.astro";
 import { Image } from "@astrojs/image/components";
+import Galeria from "@/components/Gallery/Gallery.astro";
 
 Los Choque/Guzmán son una familia de tradición tejedora o telera como se le llama en la región de los Valles
 Calchaquíes de Salta (Arg.). Eduardo Choque contrajo matrimonio con Ester Guzmán y criaron 9 hijos entre hilos
@@ -21,7 +19,19 @@ Al lado de ellos, viven las hermanas de Ester: Marcela y Silvia y al igual que e
 tejer a su pequeño taller, hecho de una estructura de madera y cañas. Durante los días de tejido, los teleros
 se acompañan del sonido de la radio, del viento y del ritmo de los telares al moverse.
 
-<Gallery1 />
+<Galeria
+  images={[
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276679/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-10_zrc735.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276677/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-8_lfvzcw.jpg",
+    "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-010.jpg?fit=1600%2C1200",
+    "https://i0.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-004.jpg?fit=1600%2C1200",
+    "https://i2.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-001.jpg?fit=1600%2C2133",
+    "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-005.jpg?fit=1600%2C1200",
+    "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-007.jpg?fit=1600%2C1200",
+    "https://i2.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-003.jpg?fit=1600%2C1200",
+    "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-002.jpg?fit=1600%2C1200",
+  ]}
+/>
 
 En esta región se teje principalmente con lana de oveja y llama y algunas veces con pelo de vicuña en los
 distintos tipos de telar que manejan. El más chico es el telar que Marcela usa para crear fajas y cintos. Éste
@@ -50,17 +60,44 @@ Y mientras, Eduardo teje de pie en el telar criollo o de pedales. Este telar, en
 
 Eduardo es un experto en ponchos. Como todos los teleros del valle, tiene su pala (madera para apretar el tejido, también conocido como machete) especial para tejer el poncho y se enorgullece de ella.
 
-<Gallery2 />
+<Galeria
+  images={[
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276776/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-27_v9xh5q.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276757/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-26_d7icvw.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276760/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-25_yocrpc.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276899/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-24_esbhh7.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276744/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-22_f1svyn.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276877/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-18_m8muwe.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276816/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-42_f7whnn.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276739/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-19_iqkc4r.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276901/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-21_apa267.jpg",
+  ]}
+/>
 
 Las herramientas de trabajo siempre están conectadas al entorno. La pala de Eduardo está hecha de madera de quebracho colorado, un árbol que se da en el norte de Argentina, en Paraguay y Brasil principalmente. Es necesario que la pala sea pesada y estable para poder dar al tejido firmeza suficiente.
 
 Un buen poncho debe estar hecho de hilos delgados de llama o vicuña y el tejido debe ser compacto y firme para no dejar pasar el viento y el agua por su tela. Es una prenda típica de los gauchos que lo protege de las inclemencias del clima.
 
-<Image alt="Tradición telera" src="https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276943/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-39_inga3l.jpg" width={1600} height={1600}  format="webp" />
+<Image
+  alt="Tradición telera"
+  src="https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276943/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-39_inga3l.jpg"
+  width={1600}
+  height={1600}
+  format="webp"
+/>
 
 El diseño del poncho salteño es simple y elegante. Está compuesto de dos lienzos rojos con una franja negra en cada costado y unidos al centro con una fina costura. Las terminaciones incluyen flecos en los bordes y un moño negro en el escote.
 
 El aprendizaje del tejido pasa por la herencia y la relación del artesano con la técnica durante toda la vida. Eduardo recuerda ser llamado por su madre para sostener las madejas de lana entre sus brazos y ella poder ovillarlas, práctica común entre las tejedoras de generaciones anteriores. Es por ello que hoy en día en este lugar, al madejero de madera, que cumple la misma función que los niños en otras épocas, se les llama cariñosamente _muchachos_.
 
-<Gallery3 />
-
+<Galeria
+  images={[
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276689/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-9_yutlh1.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276642/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-2_pl1q67.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276901/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-1_e5n912.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276636/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-6_icvw98.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276660/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-7_fzgfr1.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276847/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-3_nyhxaf.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276642/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-4_ieref9.jpg",
+  ]}
+/>

@@ -1,15 +1,15 @@
 ---
-import { GALERIA1 } from "./constants.ts";
 import { Image } from "@astrojs/image/components";
+const { images } = Astro.props;
 ---
 
 <div class="grid md:grid-cols-3 gap-0.5">
   {
-    GALERIA1.map((i) => {
+    images.map((i) => {
       return (
         <Image
-          alt={i.title}
-          src={i.image}
+          alt={i}
+          src={i}
           width={1600}
           height={1280}
           class="object-cover w-full h-64"

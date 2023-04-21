@@ -1,11 +1,9 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
+import {  getCollection } from "astro:content";
 import Pagination from "@/components/Pagination.astro";
 import Layout from "@/layouts/Layout.astro";
 import createSlug from "@/lib/createSlug";
-import { getFormattedDate } from "@/lib/formatDate";
-import { Image, Picture } from "@astrojs/image/components";
-import YoutubeLoader from "@/components/YoutubeLoader.astro";
+import { Image } from "@astrojs/image/components";
 import IconPlayVideo from "@/components/Icons/IconPlayVideo.astro";
 
 export async function getStaticPaths({ paginate }: any) {

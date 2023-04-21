@@ -8,8 +8,9 @@ featuredImage: https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666237/web
 privacyStatus: public
 ---
 
-import Gallery1 from "@/components/Tramas/el-huipil/gallery1.astro";
 import { Image } from "@astrojs/image/components";
+import FancyCarousel from "@/components/Carousel/FancyCarouselFullScreen.astro";
+import Galeria from "@/components/Gallery/Gallery.astro";
 
 En muchas regiones de Mesoamérica (área conformada por México,
 Guatemala y parte de Honduras y El Salvador), observarás a las mujeres
@@ -43,8 +44,14 @@ popularmente el huipil, masificándose su uso en gran medida y
 desencadenando la creación de nuevas técnicas, patrones estilísticos y
 formas de vestirlos.
 
-
--
+<FancyCarousel
+  images={[
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666239/web/Tramas/el-huipil/4_bvc5hm.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666237/web/Tramas/el-huipil/2_myroyn.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666205/web/Tramas/el-huipil/3_oj7m6h.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666211/web/Tramas/el-huipil/5_sq5pty.jpg",
+  ]}
+/>
 
 Como el telar de cintura en Mesoamérica es un instrumento y actividad propia del mundo femenino, el huipil también lo es. Llevarlo las hace ser mujeres y pertenecer a una comunidad, aportándole identidad y una manera de relacionarse con los demás.
 
@@ -52,8 +59,25 @@ Son ellas las que elaboran los huipiles que vestirán a lo largo de toda su vida
 
 Con sólo observar un huipil puedes darte cuenta de la zona donde se lo viste. Sus materiales y peso indican si es un huipil de tierra caliente o de un lugar donde las temperaturas son bajas. Por otro lado, el olor que expiden sus fibras y tramas indica su edad. Si es joven huele a hierba fresca, ya que la mayoría de las mujeres tejen cercanas al pasto.
 
-
----
+<Galeria
+  images={[
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666213/web/Tramas/el-huipil/DSCN7276_akjo0b.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666224/web/Tramas/el-huipil/DSCN9924_eh2rpv.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666205/web/Tramas/el-huipil/DSCN6733_sp4dbf.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666208/web/Tramas/el-huipil/DSCN6807_nu89fa.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666214/web/Tramas/el-huipil/DSCN7067_jotu4b.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666216/web/Tramas/el-huipil/DSCN9779_saaes0.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666210/web/Tramas/el-huipil/DSCN7575_dal5hw.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666215/web/Tramas/el-huipil/DSCN7149_k8to6j.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666218/web/Tramas/el-huipil/DSCN9849_o9rtkk.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666221/web/Tramas/el-huipil/DSCN7995_xc34z9.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666220/web/Tramas/el-huipil/DSCN7671_mwzjkb.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666207/web/Tramas/el-huipil/DSCN7006_b2gzne.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666224/web/Tramas/el-huipil/DSCN7752_lpfchf.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666217/web/Tramas/el-huipil/DSCN8908_pqi1tv.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1679666211/web/Tramas/el-huipil/DSCN7136_xmt4f8.jpg",
+  ]}
+/>
 
 Cuando su aroma es a humo es que es un huipil ya adulto; usado entre fogones y labores domésticas. Los de entierros son específicos para ese momento de la vida, así como los de boda; y cada comunidad tiene su estilo, colores y diseños. Asimismo, los que poseen pequeñas aberturas debajo de los brazos, dan cuenta que son utilizados por madres que buscan la manera más sencilla de que su huipil les deje amamantar a sus hijos y seres que crían.
 
