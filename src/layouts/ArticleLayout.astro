@@ -1,8 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
-import { getFormattedDate } from "@/lib/formatDate";
 import type { MarkdownLayoutProps } from "astro";
-import FancyCarousel from "@/components/Carousel/FancyCarousel.astro";
+// import FancyCarousel from "@/components/Carousel/FancyCarousel.astro";
 
 type Props = MarkdownLayoutProps<{
   // Define frontmatter props here
@@ -16,11 +15,6 @@ type Props = MarkdownLayoutProps<{
 // are accessible with type safety
 const { frontmatter } = Astro.props;
 
-// const images = [
-//   "https://i2.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-044.jpg?fit=1600%2C1200",
-//   "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-010.jpg?fit=1600%2C1200",
-//   "https://i0.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-004.jpg?fit=1600%2C1200",
-// ];
 ---
 
 <div data-pagefind-body class="min-h-screen z-0">
