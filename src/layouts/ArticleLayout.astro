@@ -45,7 +45,6 @@ const { frontmatter } = Astro.props;
     </div>
   </div>
   <div class="pb-24 w-full mt-12 font-sans">
-    <!-- <FancyCarousel images={images} /> -->
     <article class="prose prose-lg max-w-full md:prose-xl" id="article">
       <slot />
     </article>
@@ -64,7 +63,6 @@ const { frontmatter } = Astro.props;
 
 <script>
   import { Fancybox } from "@fancyapps/ui";
-  import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
   function initFancyBoxOnDivImages(divId: string): void {
     const divElement = document.getElementById(divId);
