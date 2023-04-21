@@ -2,6 +2,7 @@
 import { Image } from "@astrojs/image/components";
 import { getFormattedDate } from "@/lib/formatDate";
 import type { MarkdownLayoutProps } from "astro";
+import FancyCarousel from "@/components/Carousel/FancyCarousel.astro";
 
 type Props = MarkdownLayoutProps<{
   // Define frontmatter props here
@@ -14,18 +15,24 @@ type Props = MarkdownLayoutProps<{
 // Now, `frontmatter`, `url`, and other Markdown layout properties
 // are accessible with type safety
 const { frontmatter } = Astro.props;
+
+// const images = [
+//   "https://i2.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-044.jpg?fit=1600%2C1200",
+//   "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-010.jpg?fit=1600%2C1200",
+//   "https://i0.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-004.jpg?fit=1600%2C1200",
+// ];
 ---
 
 <div data-pagefind-body class="min-h-screen z-0">
   <div class="min-h-screen flex justify-center bg-gray-900 items-center">
     <div class="absolute inset-0 z-0 opacity-30 max-h-screen overflow-hidden">
       <Image
-        height={1000}
+        height={1200}
         width={1600}
         fit="cover"
         format={"webp"}
         alt={frontmatter.title}
-        class="object-cover min-h-screen"
+        class="object-cover w-full "
         src={frontmatter?.featuredImage}
       />
     </div>
@@ -36,11 +43,16 @@ const { frontmatter } = Astro.props;
       <h3 class="text-xl my-2 font-medium md:text-xl">
         {frontmatter.location}
       </h3>
-      {frontmatter.coAuthor && <p class="uppercase text-sm mt-6">{frontmatter.coAuthor}</p>}
+      {
+        frontmatter.coAuthor && (
+          <p class="uppercase text-sm mt-6">{frontmatter.coAuthor}</p>
+        )
+      }
     </div>
   </div>
   <div class="pb-24 w-full mt-12 font-sans">
-    <article class="prose prose-lg max-w-full md:prose-xl">
+    <!-- <FancyCarousel images={images} /> -->
+    <article class="prose prose-lg max-w-full md:prose-xl" id="article">
       <slot />
     </article>
   </div>
@@ -55,3 +67,41 @@ const { frontmatter } = Astro.props;
     src={frontmatter?.featuredImage}
   />
 </div>
+
+<script>
+  import { Fancybox } from "@fancyapps/ui";
+  import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+  function initFancyBoxOnDivImages(divId: string): void {
+    const divElement = document.getElementById(divId);
+    if (!divElement) return;
+
+    const images = divElement.getElementsByTagName("img");
+    const imageGallery: { src: string; type: string }[] = [];
+
+    for (let i = 0; i < images.length; i++) {
+      const image = images[i];
+      if (image) {
+        imageGallery.push({ src: image.src, type: "image" });
+        image.dataset.fancyboxIndex = i.toString();
+
+        image.addEventListener("click", (event) => {
+          const target = event.target as HTMLImageElement;
+          if (target) {
+            const clickedImageIndex = parseInt(
+              target.dataset.fancyboxIndex,
+              10
+            );
+            Fancybox.show(imageGallery, { startIndex: clickedImageIndex });
+          }
+        });
+      }
+    }
+  }
+
+  initFancyBoxOnDivImages("article");
+
+  Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+  });
+</script>

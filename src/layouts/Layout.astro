@@ -29,6 +29,7 @@ import Logo from "@/components/Icons/Logo.astro";
 import IconSearch from "@/components/Icons/IconSearch.astro";
 import IconFacebook from "@/components/Icons/IconFacebook.astro";
 import IconInstagram from "@/components/Icons/IconInstagram.astro";
+import IconChevronTop from "@/components/Icons/IconChevronTop.astro";
 
 const {
   title,
@@ -54,11 +55,12 @@ const pathname = new URL(Astro.request.url).pathname;
     <script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
   </head>
   <body class="w-full text-gray-900 bg-white">
+    <div id="top"/>
     <Offcanvas client:load>
       <Navigation />
     </Offcanvas>
     <header
-      class="fixed shadow-md bg-white/90 py-0.5 lg:py-2 top-0 left-0 flex justify-between right-0 z-50 backdrop-blur-sm"
+      class="sticky shadow-md bg-white/90 py-0.5 lg:py-2 top-0 left-0 flex justify-between right-0 z-50 backdrop-blur-sm"
     >
       <div class="flex items-center translate-x-6 md:-translate-x-1">
         <a href="/" rel="prefetch">
@@ -90,6 +92,12 @@ const pathname = new URL(Astro.request.url).pathname;
       <slot />
     </div>
     <a
+      class="fixed bottom-0 z-40 left-0 m-3 bg-orange-200 p-3 rounded-full shadow-lg hover:bg-orange-400 text-orange-900 hover:text-orange-100 duration-300"
+      href="#top"
+    >
+      <IconChevronTop/>
+    </a>
+    <a
       class="fixed bottom-0 z-40 right-0 m-3 bg-orange-200 p-3 rounded-full shadow-lg hover:bg-orange-400 text-orange-900 hover:text-orange-100 duration-300"
       rel="prefetch"
       href="/buscar"
@@ -97,7 +105,6 @@ const pathname = new URL(Astro.request.url).pathname;
       <IconSearch />
     </a>
     <Footer />
-
     <style is:global>
       html,
       body {
@@ -105,6 +112,10 @@ const pathname = new URL(Astro.request.url).pathname;
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
           Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      }
+
+      html {
+        @apply scroll-smooth
       }
 
       a {

@@ -3,9 +3,9 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Sobre Madejandola">
-  <div class="relative z-20 w-full pt-20 mx-auto lg:py-10">
+  <div class="relative z-20 w-full pt-20 mx-auto lg:py-0">
     <div
-      class="relative flex items-center justify-center w-full p-6 pt-40 pb-24 overflow-hidden bg-fixed bg-center bg-cover"
+      class="relative flex items-center justify-center w-full p-6 pt-40 pb-40 overflow-hidden bg-fixed bg-center bg-cover"
       style={{
         backgroundImage:
           "url(https://res.cloudinary.com/djoqdhbiv/image/upload/v1679669590/web/ImagenesFondo/del-campo-a-la-ciudad-011_iizpea.jpg)",
@@ -94,62 +94,28 @@ import Layout from "../layouts/Layout.astro";
           sumar argumentos para la protección de los derechos culturales y
           patrimoniales de los pueblos.
         </p>
-        <div class="inner">
+        <div class="inner text-center">
           <h2>¿A quién sirve?</h2>
 
-          <div class="destinado">
-            <div class="destinado-item aos-init aos-animate" data-aos="zoom-in">
+          <div class="grid -mx-12 grid-cols-5 gap-2">
+            <div class="bg-gray-100 border-2 shadow-lg text-lg rounded-lg py-6 text-center font-bold">
               Amantes del textil
             </div>
-            <div class="destinado-item aos-init aos-animate" data-aos="zoom-in">
+            <div class="bg-gray-100 border-2 shadow-lg text-lg rounded-lg py-6 text-center font-bold">
               Curiosos
             </div>
-            <div class="destinado-item aos-init aos-animate" data-aos="zoom-in">
+            <div class="bg-gray-100 border-2 shadow-lg text-lg rounded-lg py-6 text-center font-bold">
               Investigadores
             </div>
-            <div class="destinado-item aos-init aos-animate" data-aos="zoom-in">
+            <div class="bg-gray-100 border-2 shadow-lg text-lg rounded-lg py-6 text-center font-bold">
               Estudiantes
             </div>
-            <div class="destinado-item aos-init aos-animate" data-aos="zoom-in">
+            <div class="bg-gray-100 border-2 shadow-lg text-lg rounded-lg py-6 text-center font-bold">
               Diseñadores
             </div>
           </div>
         </div>
-        <div class="inner">
-          <h2>Dona</h2>
-          <h3>
-            ¿Te gusta lo que hacemos? Puedes ayudarnos a contar más historias
-            donando a MadejándoLA. Con tu dinero podremos gestionar viajes,
-            pagar a nuestros colaboradores y sostener el mantenimiento y
-            actualización del sitio.
-          </h3>
-          <form
-            action="https://www.paypal.com/cgi-bin/webscr"
-            method="post"
-            target="_top"
-          >
-            <input type="hidden" name="cmd" value="_s-xclick" />
-            <input
-              type="hidden"
-              name="hosted_button_id"
-              value="EE5AHVYNNZ5BY"
-            />
-            <input
-              type="image"
-              src="https://www.paypalobjects.com/es_XC/i/btn/btn_donate_SM.gif"
-              name="submit"
-              title="PayPal - The safer, easier way to pay online!"
-              alt="Donar con el botón PayPal"
-            />
-            <img
-              alt=""
-              src="https://www.paypal.com/es_MX/i/scr/pixel.gif"
-              width="1"
-              height="1"
-            />
-          </form>
-        </div>
-        <div class="inner">
+        <div class="inner text-center">
           <h2>SERVICIOS</h2>
           <h4>
             Nos especializamos en comunicación visual dedicada a proyectos de
@@ -157,7 +123,9 @@ import Layout from "../layouts/Layout.astro";
             textiles pero no exclusivamente.
           </h4>
 
-          <h3>Ofrecemos siguientes servicios de comunicación visual:</h3>
+          <p class="text-3xl text-center w-full block !max-w-full">
+            Ofrecemos siguientes servicios de comunicación visual:
+          </p>
 
           <div class="servicios">
             <div class="item-servicios">
@@ -173,7 +141,7 @@ import Layout from "../layouts/Layout.astro";
             </div>
           </div>
         </div>
-        <div class="inner">
+        <div class="inner text-center">
           <h2>Contacto</h2>
           <h4>
             Trabajamos desde la sensibilidad y la empatía hacia propuestas
@@ -182,15 +150,12 @@ import Layout from "../layouts/Layout.astro";
             Aires, Argentina y trabajamos presencialmente o a distancia,
             dependiendo el proyecto.
           </h4>
-
-          <h3>¿Eres parte de una cooperativa, grupo o red artesanal?</h3>
-          <h3>
+          <p>¿Eres parte de una cooperativa, grupo o red artesanal?</p>
+          <p>
             ¿Estás gestionando un evento de difusión o encuentro de técnicas
             artesanales y/o pueblos originarios?
-          </h3>
-
-          <h4>Si necesitas servicios de diseño y comunicación ¡Contáctanos!</h4>
-
+          </p>
+          <p>Si necesitas servicios de diseño y comunicación ¡Contáctanos!</p>
           <p>
             <b>madejandola@gmail.com • Tel. +5491137704486</b>
           </p>

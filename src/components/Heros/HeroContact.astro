@@ -1,58 +1,56 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import HeroContact from "@/components/Heros/HeroContact.astro";
 import { Image } from "@astrojs/image/components";
 import IconFacebook from "../Icons/IconFacebook.astro";
 import IconInstagram from "../Icons/IconInstagram.astro";
 ---
 
-<Layout title="Contacto">
+<div
+  class="relative z-10 flex flex-col items-center justify-center w-full min-h-screen px-6 mx-auto text-left md:px-0"
+>
   <div
-    class="relative z-10 flex flex-col items-center justify-center w-full min-h-screen px-6 mx-auto text-left md:px-0"
+    class="w-full relative z-10 max-w-2xl p-6 mx-auto text-center rounded-md shadow-lg md:p-12 bg-zinc-100 text-zinc-900"
   >
-    <div
-      class="w-full relative z-10 max-w-2xl p-6 mx-auto text-center rounded-md shadow-lg md:p-12 bg-zinc-100 text-zinc-900"
+    <h1
+      class="w-full mx-auto mb-8 font-sans text-4xl font-light uppercase tracking-wide text-center text-zinc-900 md:text-5xl"
     >
-      <h1
-        class="w-full mx-auto mb-8 font-sans text-4xl font-light uppercase tracking-wide text-center text-zinc-900 md:text-5xl"
-      >
-        Contacto
-      </h1>
-      <h3
-        class="w-full mx-auto mb-8 font-sans text-lg text-center text-zinc-900 md:text-xl"
-      >
-        Podes contactarnos via mail o en cualquiera de nuestras redes sociales
-      </h3>
-      <div class="relative my-6 text-zinc-900">
-        <p class="text-lg text-center w-full md:text-3xl select-all">madejandola@gmail.com</p>
-      </div>
-      <div class="flex items-center justify-center space-x-9">
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:opacity-80 group w-12 h-12"
-          href="https://www.facebook.com/madejandola/"
-        >
-          <IconFacebook class="text-lg" />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:opacity-80 group w-12 h-12"
-          href="https://www.instagram.com/madejandola//"
-        >
-          <IconInstagram />
-        </a>
-      </div>
+      Contacto
+    </h1>
+    <h3
+      class="w-full mx-auto mb-8 font-sans text-lg text-center text-zinc-900 md:text-xl"
+    >
+      Podes contactarnos via mail o en cualquiera de nuestras redes sociales
+    </h3>
+    <div class="relative my-6 text-zinc-900">
+      <p class="text-lg text-center w-full md:text-3xl select-all">
+        madejandola@gmail.com
+      </p>
     </div>
-    <div class="absolute inset-0 z-0 opacity-40">
-      <Image
-        alt="Madejandola"
-        width={1600}
-        height={800}
-        class="w-full h-screen"
-        src="https://res.cloudinary.com/djoqdhbiv/image/upload/q_auto:eco/v1664335751/web/ImagenesFondo/legado-dona-santa-009_b0pqmb.jpg"
-      />
+    <div class="flex items-center justify-center space-x-9">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:opacity-80 group w-12 h-12"
+        href="https://www.facebook.com/madejandola/"
+      >
+        <IconFacebook class="text-lg" />
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:opacity-80 group w-12 h-12"
+        href="https://www.instagram.com/madejandola//"
+      >
+        <IconInstagram />
+      </a>
     </div>
   </div>
-</Layout>
+  <div class="absolute inset-0 z-0 opacity-40">
+    <Image
+      alt="Madejandola"
+      width={1600}
+      height={800}
+      class="w-full h-screen"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/q_auto:eco/v1664335751/web/ImagenesFondo/legado-dona-santa-009_b0pqmb.jpg"
+    />
+  </div>
+</div>

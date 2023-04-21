@@ -20,12 +20,16 @@ const currentPage = page.currentPage ?? 1;
 ---
 
 <Layout title={`Tramas ${currentPage > 1 ? `— página ${currentPage} ` : ""}`}>
-  <main class="py-12 gap-6 flex flex-col">
-    <h1
-      class="text-6xl mt-16 mb-6 font-sans w-full text-center md:text-left max-w-6xl mx-auto"
+  <main class="pb-12 pt-6 gap-6 flex flex-col">
+    <div
+      class="max-w-6xl flex flex-col gap-6 mx-auto w-full text-center md:text-left"
     >
-      Tramas
-    </h1>
+      <h1 class="text-4xl font-sans">Tramas</h1>
+      <p class="text-xl font-sans">
+        Conoce las historias detrás de los textiles, cada lugar donde se crean y
+        las personas que los realizan.
+      </p>
+    </div>
     <div
       role="list"
       class="grid md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-xs md:max-w-6xl w-full mx-auto"
@@ -35,7 +39,7 @@ const currentPage = page.currentPage ?? 1;
           <a
             href={`/tramas/${createSlug(data?.title)}`}
             rel="prefetch"
-            class="relative h-64 w-full flex ring-slate-200 flex-col items-center ring  shadow-xl justify-center hover:ring-amber-600 overflow-hidden bg-gray-800  rounded-lg group duration-300"
+            class="relative group h-64 w-full flex ring-slate-200 flex-col items-center ring  shadow-xl justify-center hover:ring-amber-600 overflow-hidden bg-gray-800  rounded-lg group duration-300"
           >
             <div class="z-20 relative  duration-700">
               <div class=" animate__fadeIn animate__animated bg-gray-900 animate__delay-1s">
@@ -53,16 +57,17 @@ const currentPage = page.currentPage ?? 1;
                 />
               </div>
             </div>
-            <div class="absolute animate__fadeIn animate__animated animate__delay-1s justify-end items-start bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/60 inset-0 z-30 flex flex-col p-3">
-              <span class="p-2 pb-4 hover:underline underline-offset-4 font-sans text-2xl font-bold text-left text-white duration-700  line-clamp-3">
+            <div class="absolute animate__fadeIn animate__animated animate__delay-1s justify-end items-start bg-gradient-to-b from-transparent p-4 text-white via-slate-900/20 to-slate-900/60 inset-0 z-30 flex flex-col">
+              <h3 class="hover:underline underline-offset-4 font-sans text-2xl font-normal text-left duration-700 line-clamp-3">
                 {data?.title}
-              </span>
+              </h3>
+              <p>{data?.location}</p>
             </div>
-            {data.featuredVideo &&
-               <div class="absolute w-20 h-20 inset-0 z-20">
-              <IconPlayVideo/>
-                </div>
-            }
+            {data.featuredVideo && (
+              <div class="absolute inset-0 flex justify-center items-center group-hover:opacity-90 duration-300 opacity-60 z-20 text-white">
+                <IconPlayVideo />
+              </div>
+            )}
             <div class="inset-0 z-10 absolute flex w-full h-full bg-gray-100 justify-center items-center">
               <div class="!opacity-30 spinner">
                 <span />

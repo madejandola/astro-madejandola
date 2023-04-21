@@ -97,6 +97,13 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"perfiles": {
+"diana-fabre-y-tia-cayita.mdx": {
+  id: "diana-fabre-y-tia-cayita.mdx",
+  slug: "diana-fabre-y-tia-cayita",
+  body: string,
+  collection: "perfiles",
+  data: InferEntrySchema<"perfiles">
+} & { render(): Render[".mdx"] },
 "mariana-rivera-militante-de-hilo-y-tela.mdx": {
   id: "mariana-rivera-militante-de-hilo-y-tela.mdx",
   slug: "mariana-rivera-militante-de-hilo-y-tela",
@@ -104,11 +111,32 @@ declare module 'astro:content' {
   collection: "perfiles",
   data: InferEntrySchema<"perfiles">
 } & { render(): Render[".mdx"] },
+"martha-clippinger.mdx": {
+  id: "martha-clippinger.mdx",
+  slug: "martha-clippinger",
+  body: string,
+  collection: "perfiles",
+  data: InferEntrySchema<"perfiles">
+} & { render(): Render[".mdx"] },
 },
 "tramas": {
+"del-campo-a-la-ciudad.mdx": {
+  id: "del-campo-a-la-ciudad.mdx",
+  slug: "del-campo-a-la-ciudad",
+  body: string,
+  collection: "tramas",
+  data: InferEntrySchema<"tramas">
+} & { render(): Render[".mdx"] },
 "el-huipil.mdx": {
   id: "el-huipil.mdx",
   slug: "el-huipil",
+  body: string,
+  collection: "tramas",
+  data: InferEntrySchema<"tramas">
+} & { render(): Render[".mdx"] },
+"el-legado-de-dona-santa.mdx": {
+  id: "el-legado-de-dona-santa.mdx",
+  slug: "el-legado-de-dona-santa",
   body: string,
   collection: "tramas",
   data: InferEntrySchema<"tramas">
@@ -137,6 +165,13 @@ declare module 'astro:content' {
 "neuquen-sentir-el-textil-mapuche.mdx": {
   id: "neuquen-sentir-el-textil-mapuche.mdx",
   slug: "neuquen-sentir-el-textil-mapuche",
+  body: string,
+  collection: "tramas",
+  data: InferEntrySchema<"tramas">
+} & { render(): Render[".mdx"] },
+"pedro-frida-y-su-jardin-de-flores.mdx": {
+  id: "pedro-frida-y-su-jardin-de-flores.mdx",
+  slug: "pedro-frida-y-su-jardin-de-flores",
   body: string,
   collection: "tramas",
   data: InferEntrySchema<"tramas">
