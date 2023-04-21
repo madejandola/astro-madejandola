@@ -19,6 +19,9 @@ import "@fontsource/alegreya/500.css";
 import "@fontsource/alegreya/600.css";
 import "@fontsource/alegreya/700.css";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import "@fancyapps/ui/dist/carousel/carousel.css";
+import "@fancyapps/ui/dist/carousel/carousel.autoplay.css";
+import "@fancyapps/ui/dist/carousel/carousel.thumbs.css";
 import BaseHead from "@/components/BaseHead.astro";
 import Footer from "@/components/Footer.astro";
 import IconChevronTop from "@/components/Icons/IconChevronTop.astro";
@@ -53,7 +56,7 @@ const pathname = new URL(Astro.request.url).pathname;
     <script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
   </head>
   <body class="w-full text-gray-900 bg-white">
-    <div id="top"/>
+    <div id="top"></div>
     <Offcanvas client:load>
       <Navigation />
     </Offcanvas>
@@ -93,7 +96,7 @@ const pathname = new URL(Astro.request.url).pathname;
       class="fixed bottom-0 z-40 left-0 m-3 bg-orange-200 p-3 rounded-full shadow-lg hover:bg-orange-400 text-orange-900 hover:text-orange-100 duration-300"
       href="#top"
     >
-      <IconChevronTop/>
+      <IconChevronTop />
     </a>
     <a
       class="fixed bottom-0 z-40 right-0 m-3 bg-orange-200 p-3 rounded-full shadow-lg hover:bg-orange-400 text-orange-900 hover:text-orange-100 duration-300"
@@ -113,7 +116,7 @@ const pathname = new URL(Astro.request.url).pathname;
       }
 
       html {
-        @apply scroll-smooth
+        @apply scroll-smooth;
       }
 
       a {
