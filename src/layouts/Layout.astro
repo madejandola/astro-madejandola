@@ -168,6 +168,10 @@ const pathname = new URL(Astro.request.url).pathname;
       article.prose h3 {
         @apply max-w-3xl px-3 mx-auto font-bold w-full flex justify-between pt-2 font-sans text-2xl;
       }
+
+      .glightbox-mobile .goverlay {
+        @apply bg-black/50;
+      }
     </style>
   </body>
 </html>

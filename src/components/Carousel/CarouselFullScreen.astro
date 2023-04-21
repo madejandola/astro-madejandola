@@ -3,21 +3,57 @@ import { Image } from "@astrojs/image/components";
 const { images } = Astro.props;
 ---
 
-<div class="mx-auto">
-  {
-    images.map((i) => {
-      return (
-        <div class={`slide ${i.gridColumns}`}>
-          <Image
-            alt={i}
-            src={i}
-            width={1600}
-            height={1280}
-            class="object-cover w-full"
-            format="webp"
-          />
-        </div>
-      );
-    })
-  }
+<div class="max-w-full w-full mx-auto">
+  <div
+    style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+    class="swiper mySwiperFullScreen"
+  >
+    <div class="swiper-wrapper">
+      {
+        images.map((i) => {
+          return (
+            <div class="swiper-slide">
+              <Image
+                alt={i}
+                src={i}
+                width={1600}
+                height={1280}
+                class="object-cover w-full h-screen"
+                format="webp"
+              />
+            </div>
+          );
+        })
+      }
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
 </div>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiperFullScreen", {
+    spaceBetween: 10,
+    effect: "fade",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+
+<style>
+  .swiper {
+    @apply w-full h-screen;
+  }
+</style>
