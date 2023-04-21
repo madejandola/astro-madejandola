@@ -18,11 +18,11 @@
     "noUncheckedIndexedAccess": true,
     "paths": {
       "@/components/*": ["src/components/*"],
-      "@/lib/*": ["src/lib/*"],
+      "@/lib/*": ["src/utils/*"],
       "@/layouts/*": ["src/layouts/*"],
       "@/styles/*": ["src/styles/*"],
       "@/src/*": ["src/*"],
-      "@/utils/*": ["utils/*"]
+      "@/utils/*": ["src/utils/*"]
     }
   },
   "include": ["src/**/*"]

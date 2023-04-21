@@ -10,15 +10,26 @@ const { images } = Astro.props;
   {
     images.map((i) => {
       return (
-        <Image
-          alt={i}
-          src={i}
-          width={1600}
-          height={1280}
-          class="object-cover w-full h-64"
-          format="webp"
-        />
+        <a class="glightbox" href={i}>
+          <Image
+            alt={i}
+            src={i}
+            width={1600}
+            height={1280}
+            class="object-cover w-full h-64"
+            format="webp"
+          />
+        </a>
       );
     })
   }
 </div>
+
+<script>
+  import GLightbox from "glightbox";
+  document.addEventListener("DOMContentLoaded", () => {
+    const glightbox = GLightbox({
+      /* options */
+    });
+  });
+</script>

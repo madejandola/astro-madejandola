@@ -1,16 +1,13 @@
 ---
 import { Image } from "@astrojs/image/components";
-
 const { images } = Astro.props;
 ---
 
-<div class="mx-auto" id="myCarousel1">
+<div class="mx-auto">
   {
     images.map((i) => {
       return (
-        <div
-          class="slide"
-        >
+        <div class={`slide ${i.gridColumns}`}>
           <Image
             alt={i}
             src={i}
@@ -24,4 +21,3 @@ const { images } = Astro.props;
     })
   }
 </div>
-

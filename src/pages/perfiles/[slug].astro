@@ -1,8 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
-import createSlug from "@/lib/createSlug";
-// import { getFormattedDate } from "@/lib/formatDate";
+import createSlug from "@/utils/createSlug";
 
 export async function getStaticPaths() {
   const video = await getCollection("perfiles");

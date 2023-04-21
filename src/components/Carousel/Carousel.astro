@@ -1,28 +1,78 @@
 ---
 import { Image } from "@astrojs/image/components";
-interface Props {
-  images: Array<string>;
-}
 const { images } = Astro.props;
 ---
 
-<div class="max-w-2xl mx-auto" id="myCarousel1">
-  {
-    images.map((i) => {
-      return (
-        <div
-          class="slide"
-        >
-          <Image
-            alt={i}
-            src={i}
-            width={1600}
-            height={1280}
-            class="object-cover w-full h-96"
-            format="webp"
-          />
-        </div>
-      );
-    })
-  }
+<div class="max-w-4xl w-full mx-auto">
+  <div
+    style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+    class="swiper mySwiper2"
+  >
+    <div class="swiper-wrapper">
+      {
+        images.map((i) => {
+          return (
+            <div class="swiper-slide">
+              <Image
+                alt={i}
+                src={i}
+                width={1600}
+                height={1280}
+                class="object-cover w-full h-96"
+                format="webp"
+              />
+            </div>
+          );
+        })
+      }
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <div thumbsSlider="" class="swiper mySwiper mt-6">
+    <div class="swiper-wrapper">
+      {
+        images.map((i) => {
+          return (
+            <div class="swiper-slide">
+              <Image
+                alt={i}
+                src={i}
+                width={1600}
+                height={1280}
+                class="object-cover w-full h-24"
+                format="webp"
+              />
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
 </div>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var swiper2 = new Swiper(".mySwiper2", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+</script>
+
+<style>
+  .swiper {
+    @apply w-full;
+  }
+</style>
