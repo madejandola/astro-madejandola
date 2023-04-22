@@ -59,13 +59,13 @@ const pathname = new URL(Astro.request.url).pathname;
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
     ></script>
   </head>
-  <body class="w-full text-gray-900 bg-white">
+  <body class="w-full text-gray-900 bg-white pt-16 md:pt-0">
     <div id="top"></div>
     <Offcanvas client:load>
       <Navigation />
     </Offcanvas>
     <header
-      class="sticky shadow-md bg-white/90 py-0.5 lg:py-2 top-0 left-0 flex justify-between right-0 z-50 backdrop-blur-sm"
+      class="fixed md:relative shadow-md bg-white/90 py-0.5 lg:py-2 top-0 left-0 flex justify-between right-0 z-50 backdrop-blur-sm"
     >
       <div class="flex items-center translate-x-6 md:-translate-x-1">
         <a href="/" rel="prefetch">
@@ -110,6 +110,16 @@ const pathname = new URL(Astro.request.url).pathname;
       <IconSearch />
     </a>
     <Footer />
+
+    <script>
+      import GLightbox from "glightbox";
+      document.addEventListener("DOMContentLoaded", () => {
+        const glightbox = GLightbox({
+          /* options */
+        });
+      });
+    </script>
+
     <style is:global>
       html,
       body {

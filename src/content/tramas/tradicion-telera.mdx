@@ -9,6 +9,7 @@ privacyStatus: public
 
 import { Image } from "@astrojs/image/components";
 import Galeria from "@/components/Gallery/Gallery.astro";
+import CustomGallery from "@/components/Gallery/CustomGallery.astro";
 
 Los Choque/Guzmán son una familia de tradición tejedora o telera como se le llama en la región de los Valles
 Calchaquíes de Salta (Arg.). Eduardo Choque contrajo matrimonio con Ester Guzmán y criaron 9 hijos entre hilos
@@ -19,19 +20,125 @@ Al lado de ellos, viven las hermanas de Ester: Marcela y Silvia y al igual que e
 tejer a su pequeño taller, hecho de una estructura de madera y cañas. Durante los días de tejido, los teleros
 se acompañan del sonido de la radio, del viento y del ritmo de los telares al moverse.
 
-<Galeria
-  images={[
-    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276679/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-10_zrc735.jpg",
-    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276677/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-8_lfvzcw.jpg",
-    "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-010.jpg?fit=1600%2C1200",
-    "https://i0.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-004.jpg?fit=1600%2C1200",
-    "https://i2.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-001.jpg?fit=1600%2C2133",
-    "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-005.jpg?fit=1600%2C1200",
-    "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-007.jpg?fit=1600%2C1200",
-    "https://i2.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-003.jpg?fit=1600%2C1200",
-    "https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-002.jpg?fit=1600%2C1200",
-  ]}
-/>
+<CustomGallery>
+  <a
+    class="glightbox"
+    href="https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276679/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-10_zrc735.jpg"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276679/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-10_zrc735.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a
+    class="glightbox"
+    href="https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276677/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-8_lfvzcw.jpg"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276677/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-8_lfvzcw.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a
+    class="glightbox"
+    href="https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-010.jpg?fit=1600%2C1200"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-010.jpg?fit=1600%2C1200"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a
+    class="glightbox"
+    href="https://i0.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-004.jpg?fit=1600%2C1200"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://i0.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-004.jpg?fit=1600%2C1200"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a
+    class="glightbox"
+    href="https://i2.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-001.jpg?fit=1600%2C2133"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://i2.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-001.jpg?fit=1600%2C2133"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a
+    class="glightbox"
+    href="https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-005.jpg?fit=1600%2C1200"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-005.jpg?fit=1600%2C1200"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a
+    class="glightbox"
+    href="https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-007.jpg?fit=1600%2C1200"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-007.jpg?fit=1600%2C1200"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a
+    class="glightbox"
+    href="https://i2.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-003.jpg?fit=1600%2C1200"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://i2.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-003.jpg?fit=1600%2C1200"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a
+    class="glightbox"
+    href="https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-002.jpg?fit=1600%2C1200"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://i1.wp.com/madejandola.com/wp-content/uploads/2019/09/choque-guzman-002.jpg?fit=1600%2C1200"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+</CustomGallery>
 
 En esta región se teje principalmente con lana de oveja y llama y algunas veces con pelo de vicuña en los
 distintos tipos de telar que manejan. El más chico es el telar que Marcela usa para crear fajas y cintos. Éste
@@ -90,14 +197,96 @@ El diseño del poncho salteño es simple y elegante. Está compuesto de dos lien
 
 El aprendizaje del tejido pasa por la herencia y la relación del artesano con la técnica durante toda la vida. Eduardo recuerda ser llamado por su madre para sostener las madejas de lana entre sus brazos y ella poder ovillarlas, práctica común entre las tejedoras de generaciones anteriores. Es por ello que hoy en día en este lugar, al madejero de madera, que cumple la misma función que los niños en otras épocas, se les llama cariñosamente _muchachos_.
 
-<Galeria
-  images={[
-    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276689/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-9_yutlh1.jpg",
-    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276642/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-2_pl1q67.jpg",
-    "https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276901/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-1_e5n912.jpg",
-    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276636/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-6_icvw98.jpg",
-    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276660/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-7_fzgfr1.jpg",
-    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276847/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-3_nyhxaf.jpg",
-    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276642/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-4_ieref9.jpg",
-  ]}
-/>
+<CustomGallery columns="md:grid-cols-4">
+  <a
+    class="glightbox"
+    href="https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276689/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-9_yutlh1.jpg"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276689/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-9_yutlh1.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a
+    class="glightbox"
+    href="https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276642/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-2_pl1q67.jpg"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276642/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-2_pl1q67.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a
+    class="glightbox"
+    href="https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276901/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-1_e5n912.jpg"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,q_auto:good,w_1600/v1665276901/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-1_e5n912.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a
+    class="glightbox"
+    href="https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276636/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-6_icvw98.jpg"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276636/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-6_icvw98.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a
+    class="glightbox"
+    href="https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276660/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-7_fzgfr1.jpg"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276660/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-7_fzgfr1.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a
+    class="glightbox"
+    href="https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276847/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-3_nyhxaf.jpg"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276847/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-3_nyhxaf.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a
+    class="glightbox col-span-2"
+    href="https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276642/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-4_ieref9.jpg"
+  >
+    <Image
+      alt="Choque Guzman"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/v1665276642/web/Tramas/Tradici%C3%B3n%20Telera/choque-guzman-4_ieref9.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+</CustomGallery>
