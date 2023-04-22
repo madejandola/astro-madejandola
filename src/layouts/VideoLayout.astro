@@ -16,13 +16,13 @@ const { frontmatter, url } = Astro.props;
 ---
 
 <div data-pagefind-body class="min-h-screen bg-gray-900 w-full">
-  <div class="max-w-4xl mx-auto py-24 md:py-10">
+  <div class="max-w-4xl mx-auto pb-12 flex justify-center items-center flex-col">
     <iframe
       title="vimeo-player"
       src={frontmatter.featuredVideo}
-      width="100%"
+      width="600"
       height="540"
-      class="aspect-video"
+      class="aspect-video w-full h-64 md:h-96"
       allowfullscreen
     >
     </iframe>
@@ -31,6 +31,11 @@ const { frontmatter, url } = Astro.props;
     </h1>
     <div class="px-0 md:px-6 prose prose-invert max-w-3xl mx-auto prose-lg md:prose-xl">
       <slot />
+    </div>
+    <div class="py-12 flex justify-center items-center max-w-md w-full mx-auto">
+      <a href="/tramas" class="btn red w-full">
+        Volver a la trama
+      </a>
     </div>
   </div>
   <Image

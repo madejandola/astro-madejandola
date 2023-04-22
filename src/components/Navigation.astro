@@ -50,6 +50,17 @@ const pathname = new URL(Astro.request.url).pathname;
     Sobre Madejandola
   </a>
   <a
+    class={pathname === "/buscar"
+      ? "active"
+      : "" || pathname.includes("/buscar")
+      ? "active"
+      : ""}
+    rel="prefetch"
+    href="/buscar"
+  >
+    Buscar
+  </a>
+  <a
     class={pathname === "/contacto"
       ? "active"
       : "" || pathname.includes("/contacto")
@@ -64,45 +75,52 @@ const pathname = new URL(Astro.request.url).pathname;
 
 <style>
   nav {
-    @apply mx-auto  gap-x-6 w-full flex justify-between items-center;
+    @apply mx-auto gap-x-6 w-full flex justify-between items-center;
   }
 
   nav a {
-    @apply text-lg text-left duration-300 font-bold text-gray-900  font-sans;
+    @apply text-lg px-1 text-left duration-300 font-bold text-gray-900 py-3 font-sans;
   }
 
   nav a:nth-child(1) {
-    @apply hover:text-[#2bb673];
+    @apply hover:text-[#2bb673] ;
   }
   nav a:nth-child(1).active {
-    @apply text-[#2bb673];
+    @apply text-[#2bb673] border-y-2 border-dashed border-[#2bb673];
   }
 
   nav a:nth-child(2) {
-    @apply hover:text-[#2e3192];
+    @apply hover:text-[#2e3192] ;
   }
   nav a:nth-child(2).active {
-    @apply text-[#2e3192];
+    @apply text-[#2e3192] border-y-2 border-dashed border-[#2e3192];
   }
 
   nav a:nth-child(3) {
-    @apply hover:text-[#92278f];
+    @apply hover:text-[#92278f] ;
   }
   nav a:nth-child(3).active {
-    @apply text-[#92278f];
+    @apply text-[#92278f] border-y-2 border-dashed border-[#92278f];
   }
 
   nav a:nth-child(4) {
-    @apply hover:text-[#be1e2d];
+    @apply hover:text-[#f03ca7] ;
   }
   nav a:nth-child(4).active {
-    @apply text-[#be1e2d];
+    @apply text-[#f03ca7] border-y-2 border-dashed border-[#f03ca7];
   }
 
   nav a:nth-child(5) {
-    @apply hover:text-[#f7941e];
+    @apply hover:text-[#be1e2d] ;
   }
   nav a:nth-child(5).active {
-    @apply text-[#f7941e];
+    @apply text-[#be1e2d] border-y-2 border-dashed border-[#be1e2d];
+  }
+
+  nav a:nth-child(6) {
+    @apply hover:text-[#f7941e] ;
+  }
+  nav a:nth-child(6).active {
+    @apply text-[#f7941e] border-y-2 border-dashed border-[#f7941e];
   }
 </style>
