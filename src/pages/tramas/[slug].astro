@@ -17,7 +17,7 @@ const { data, body, render } = Astro.props;
 const { Content } = await render();
 ---
 
-<Layout title={data?.title} description="trama" image={data?.featuredImage}>
+<Layout title={data?.title} image={data?.featuredImage}>
   <Content />
 </Layout>
 
