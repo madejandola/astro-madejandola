@@ -5,7 +5,6 @@ const pathname = new URL(Astro.request.url).pathname;
 ---
 
 <nav aria-label="Top">
-  <a class={pathname === "/" ? "active" : ""} rel="prefetch" href="/">Inicio</a>
   <a
     class={pathname === "/tramas"
       ? "active"
@@ -18,16 +17,16 @@ const pathname = new URL(Astro.request.url).pathname;
     Tramas
   </a>
   <a
-  class={pathname === "/perfiles"
-    ? "active"
-    : "" || pathname.includes("/perfiles")
-    ? "active"
-    : ""}
-  rel="prefetch"
-  href="/perfiles"
->
-  Perfiles
-</a>
+    class={pathname === "/perfiles"
+      ? "active"
+      : "" || pathname.includes("/perfiles")
+      ? "active"
+      : ""}
+    rel="prefetch"
+    href="/perfiles"
+  >
+    Perfiles
+  </a>
   <a
     class={pathname === "/aliados"
       ? "active"
@@ -65,14 +64,45 @@ const pathname = new URL(Astro.request.url).pathname;
 
 <style>
   nav {
-    @apply mx-auto pr-12 px-4 gap-x-6 w-full flex justify-between items-center;
+    @apply mx-auto px-4 gap-x-6 w-full flex justify-between items-center;
   }
 
   nav a {
-    @apply text-lg text-left hover:text-orange-600 duration-300 font-bold text-gray-900  font-sans;
+    @apply text-lg text-left duration-300 font-bold text-gray-900  font-sans;
   }
 
-  nav a.active {
-    @apply text-orange-600;
+  nav a:nth-child(1) {
+    @apply hover:text-[#2bb673];
+  }
+  nav a:nth-child(1).active {
+    @apply text-[#2bb673];
+  }
+
+  nav a:nth-child(2) {
+    @apply hover:text-[#2e3192];
+  }
+  nav a:nth-child(2).active {
+    @apply text-[#2e3192];
+  }
+
+  nav a:nth-child(3) {
+    @apply hover:text-[#92278f];
+  }
+  nav a:nth-child(3).active {
+    @apply text-[#92278f];
+  }
+
+  nav a:nth-child(4) {
+    @apply hover:text-[#be1e2d];
+  }
+  nav a:nth-child(4).active {
+    @apply text-[#be1e2d];
+  }
+
+  nav a:nth-child(5) {
+    @apply hover:text-[#f7941e];
+  }
+  nav a:nth-child(5).active {
+    @apply text-[#f7941e];
   }
 </style>

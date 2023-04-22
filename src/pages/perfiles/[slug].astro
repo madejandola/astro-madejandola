@@ -20,13 +20,3 @@ const { Content } = await render();
 <Layout title={data?.title} description={body} image={data?.featuredImage}>
   <Content />
 </Layout>
-
-<style is:global>
-  .prose p {
-    @apply my-6 block px-3 mx-auto max-w-3xl;
-  }
-
-  .prose img {
-    @apply my-0;
-  }
-</style>

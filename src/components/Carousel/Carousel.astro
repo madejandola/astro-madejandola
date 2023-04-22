@@ -34,7 +34,7 @@ const { images } = Astro.props;
       {
         images.map((i) => {
           return (
-            <div class="swiper-slide">
+            <div class="swiper-slide cursor-pointer hover:opacity-60">
               <Image
                 alt={i}
                 src={i}
@@ -82,6 +82,6 @@ const { images } = Astro.props;
 
 <style>
   .swiper {
-    @apply w-full;
+    @apply w-full select-none;
   }
 </style>

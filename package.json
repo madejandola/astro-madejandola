@@ -44,7 +44,6 @@
     "flickity": "^3.0.0",
     "fuse.js": "^6.6.2",
     "glightbox": "^3.2.0",
-    "n-carousel": "^1.1.52",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.10.1",

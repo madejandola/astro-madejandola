@@ -65,50 +65,34 @@ const pathname = new URL(Astro.request.url).pathname;
       <Navigation />
     </Offcanvas>
     <header
-      class="fixed md:relative shadow-md bg-white/90 py-0.5 lg:py-2 top-0 left-0 flex justify-between right-0 z-50 backdrop-blur-sm"
+      class="fixed px-2 md:relative shadow-md bg-white/90 py-0.5 lg:py-2 top-0 left-0 flex justify-between right-0 z-50 backdrop-blur-sm"
     >
-      <div class="flex items-center translate-x-6 md:-translate-x-1">
+      <div class="flex w-64 items-center">
         <a href="/" rel="prefetch">
           <Logo />
           <span class="sr-only">Madejandola</span>
         </a>
       </div>
-      <div class="hidden lg:flex items-center space-x-3 lg:pr-6">
+      <div class="hidden lg:flex items-center space-x-3">
         <Navigation />
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:opacity-80 group w-6 h-6"
-          href="https://www.facebook.com/madejandola/"
-        >
-          <IconFacebook />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:opacity-80 group w-6 h-6"
-          href="https://www.instagram.com/madejandola//"
-        >
-          <IconInstagram />
-        </a>
       </div>
     </header>
     <div data-pagefind-ignore>
       <slot />
     </div>
     <a
-      class="fixed bottom-0 z-40 left-0 m-3 bg-orange-200 p-3 rounded-full shadow-lg hover:bg-orange-400 text-orange-900 hover:text-orange-100 duration-300"
+      class="fixed bottom-0 z-40 right-0 m-3 bg-orange-200 p-3 rounded-full shadow-lg hover:bg-orange-400 text-orange-900 hover:text-orange-100 duration-300"
       href="#top"
     >
       <IconChevronTop />
     </a>
-    <a
-      class="fixed bottom-0 z-40 right-0 m-3 bg-orange-200 p-3 rounded-full shadow-lg hover:bg-orange-400 text-orange-900 hover:text-orange-100 duration-300"
+    <!-- <a
+      class="fixed bottom-0 z-40 left-0 m-3 bg-orange-200 p-3 rounded-full shadow-lg hover:bg-orange-400 text-orange-900 hover:text-orange-100 duration-300"
       rel="prefetch"
       href="/buscar"
     >
       <IconSearch />
-    </a>
+    </a> -->
     <Footer />
 
     <script>
@@ -169,6 +153,14 @@ const pathname = new URL(Astro.request.url).pathname;
 
       article.prose p {
         @apply font-sans;
+      }
+
+      .prose p {
+        @apply my-6 block px-3 mx-auto max-w-2xl;
+      }
+
+      .prose img {
+        @apply my-0;
       }
 
       article.prose h4 {
