@@ -15,7 +15,7 @@ const tramas = defineCollection({
 const perfiles = defineCollection({
   schema: z.object({
     title: z.string(),
-    publishedAt: z.date(),
+    publishedAt: z.string(),
     location: z.string(),
     coAuthor: z.string().optional(),
     privacyStatus: z.enum(["public", "private"]),

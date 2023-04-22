@@ -8,6 +8,7 @@ type Props = MarkdownLayoutProps<{
   location?: string;
   featuredImage: string;
   coAuthor?: string;
+  publishedAt?: string;
 }>;
 
 // Now, `frontmatter`, `url`, and other Markdown layout properties
@@ -16,7 +17,9 @@ const { frontmatter } = Astro.props;
 ---
 
 <div data-pagefind-body class="min-h-screen z-0">
-  <div class="min-h-screen relative flex justify-center bg-gray-900 items-center">
+  <div
+    class="min-h-screen relative flex justify-center bg-gray-900 items-center"
+  >
     <div class="absolute inset-0 z-0 opacity-30 max-h-screen overflow-hidden">
       <Image
         height={1200}
@@ -40,16 +43,24 @@ const { frontmatter } = Astro.props;
           <p class="uppercase text-sm mt-6">{frontmatter.coAuthor}</p>
         )
       }
+      {
+        frontmatter.publishedAt && (
+          <p class="uppercase text-sm">{frontmatter.publishedAt}</p>
+        )
+      }
     </div>
   </div>
   <div class="pb-24 w-full mt-12 font-sans">
-    <article class="prose prose-lg prose-blue max-w-full md:prose-xl" id="article">
+    <article
+      class="prose prose-lg prose-blue max-w-full md:prose-xl"
+      id="article"
+    >
       <slot />
     </article>
-    <div class="py-12 px-3 flex justify-center items-center max-w-md w-full mx-auto">
-      <a href="/tramas" class="btn red w-full">
-        Volver a la trama
-      </a>
+    <div
+      class="py-12 px-3 flex justify-center items-center max-w-md w-full mx-auto"
+    >
+      <a href="/perfiles" class="btn red w-full"> Volver a perfiles</a>
     </div>
   </div>
   <Image
@@ -63,4 +74,3 @@ const { frontmatter } = Astro.props;
     src={frontmatter?.featuredImage}
   />
 </div>
-
