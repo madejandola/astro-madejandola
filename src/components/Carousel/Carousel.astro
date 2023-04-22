@@ -29,7 +29,7 @@ const { images } = Astro.props;
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
-  <div thumbsSlider="" class="swiper mySwiper mt-6">
+  <div thumbsSlider="" class="swiper mySwiper mt-3">
     <div class="swiper-wrapper">
       {
         images.map((i) => {
@@ -40,7 +40,7 @@ const { images } = Astro.props;
                 src={i}
                 width={1600}
                 height={1280}
-                class="object-cover w-full h-24"
+                class="object-cover w-full h-32"
                 format="webp"
               />
             </div>

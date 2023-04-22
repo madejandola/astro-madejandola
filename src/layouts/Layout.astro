@@ -65,16 +65,18 @@ const pathname = new URL(Astro.request.url).pathname;
       <Navigation />
     </Offcanvas>
     <header
-      class="fixed px-2 md:relative shadow-md bg-white/90 py-0.5 lg:py-2 top-0 left-0 flex justify-between right-0 z-50 backdrop-blur-sm"
+      class="fixed  md:relative shadow-md bg-white/90 py-0.5 lg:py-2 top-0 left-0 right-0 z-50 backdrop-blur-sm"
     >
-      <div class="flex w-64 items-center">
-        <a href="/" rel="prefetch">
-          <Logo />
-          <span class="sr-only">Madejandola</span>
-        </a>
-      </div>
-      <div class="hidden lg:flex items-center space-x-3">
-        <Navigation />
+      <div class="flex justify-between items-center max-w-6xl mx-auto">
+        <div class="flex w-64 items-center">
+          <a href="/" rel="prefetch">
+            <Logo />
+            <span class="sr-only">Madejandola</span>
+          </a>
+        </div>
+        <div class="hidden lg:flex items-center gap-3">
+          <Navigation />
+        </div>
       </div>
     </header>
     <div data-pagefind-ignore>

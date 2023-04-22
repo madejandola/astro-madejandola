@@ -19,18 +19,18 @@ const currentPage = page.currentPage ?? 1;
 <Layout title={`Perfiles ${currentPage > 1 ? `— página ${currentPage} ` : ""}`}>
   <main class="py-12 gap-6 flex flex-col">
     <h1
-      class="text-6xl mt-16 mb-6 font-sans w-full text-center max-w-6xl mx-auto"
+      class="text-6xl  font-sans w-full text-center max-w-6xl mx-auto"
     >
       Perfiles
     </h1>
-    <p class="max-w-5xl mb-6 text-2xl text-center mx-auto">
+    <p class="max-w-3xl  text-2xl text-center mx-auto">
       Aquí encontrarás entrevistas y perfiles que realizamos a investigadores,
       docentes y creadores cuyo trabajo está ligado a la reflexión sobre los
       textiles artesanales.
     </p>
     <div
       role="list"
-      class="grid md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-xs md:max-w-6xl w-full mx-auto"
+      class="grid md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-xs mt-6 md:max-w-6xl w-full mx-auto"
     >
       {
         page.data.map(({ data }: any) => (
