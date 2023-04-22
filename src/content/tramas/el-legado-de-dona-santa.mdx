@@ -3,11 +3,17 @@ layout: ../../layouts/ArticleLayout.astro
 title: El legado de Doña Santa
 publishedAt: 2022-05-02T21:42:56Z
 location: "Michoacán, México"
-featuredImage: https://i2.wp.com/madejandola.com/wp-content/uploads/2019/09/legado-dona-santa-009.jpg?w=1600
+featuredImage: https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167699/web/Tramas/el-legado-de-dona-santa/9_y_mosaico_fktizq.jpg
 privacyStatus: public
 ---
 
-### Imagen
+import { Image } from "@astrojs/image/components";
+import Gallery from "@/components/Gallery/Gallery.astro";
+import Carousel from "@/components/Carousel/Carousel.astro";
+import CarouselFullScreen from "@/components/Carousel/CarouselFullScreen.astro";
+import CustomGallery from "@/components/Gallery/CustomGallery.astro";
+
+<Image class="mx-auto w-full max-w-2xl my-12" alt="Sabiduría de la Selva" width="1006" height="755" src="https://res.cloudinary.com/djoqdhbiv/image/upload/c_scale,w_1006/v1682167690/web/Tramas/el-legado-de-dona-santa/4_y_PRINCIPAL_xmfsnt.jpg"/>
 
 Doña Santa es una de las más talentosas y reconocidas maestras reboceras de Michoacán. Tiene una tienda de abarrotes en la que vende artículos básicos para los hogares de Angahuan: pasta para sopas, chiles (ajíes) enlatados, veladoras, jabón, arroz y leche entre otros.
 
@@ -15,9 +21,15 @@ Durante las mañanas, en la puerta de la misma, se ofrece café soluble y atole 
 
 <iframe class="max-w-4xl mx-auto" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/626529489&amp;color=%23c93838&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe>
 
+<p></p>
 
-
-### Carousel
+<Carousel
+  images={[
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167691/web/Tramas/el-legado-de-dona-santa/1_zqxfq0.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167691/web/Tramas/el-legado-de-dona-santa/2_q9sru6.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167690/web/Tramas/el-legado-de-dona-santa/3_aw46ab.jpg",
+  ]}
+/>
 
 Ella, al igual que la mayoría de las tejedoras de la región, se especializa en tejer rebozos. Es una prenda de uso diario que se utiliza como para protegerse del frío, para cargar objetos o bebés o simplemente como accesorio. En esta región, se tejen normalmente con hilo de algodón, estambre de acrilán y lana de oveja.
 
@@ -25,7 +37,16 @@ El rebozo se confecciona en varias etapas y normalmente lo realizan distintas pe
 
 <iframe class="max-w-4xl mx-auto" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/626529405&amp;color=%23c93838&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe>
 
-### Carousel fullscreen
+<p></p>
+
+<CarouselFullScreen
+  images={[
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167699/web/Tramas/el-legado-de-dona-santa/9_y_mosaico_fktizq.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167694/web/Tramas/el-legado-de-dona-santa/8_qs9tep.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167691/web/Tramas/el-legado-de-dona-santa/6_g6u08i.jpg",
+    "https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167694/web/Tramas/el-legado-de-dona-santa/7_ahgyhe.jpg",
+  ]}
+/>
 
 Es por esto que para Santa ha sido muy importante transmitir sus técnicas y conocimientos a las mujeres de su familia. Este es un oficio que han aprendido sus hijas, nueras y nietas acompañándola en la cotidianidad, al lado de la cama o junto al fogón.
 
@@ -33,4 +54,85 @@ Es por esto que para Santa ha sido muy importante transmitir sus técnicas y con
 
 Los tejidos de Santa son sin duda impecables y repletos riqueza. Ésta que sólo el trabajo de muchas décadas deja como resultado. Santa es una mujer cariñosa pero firme, bondadosa pero exigente y simplemente talentosa. Ella, como tantas mujeres en América Latina, es portadora de conocimientos ancestrales que se materializan en objetos textiles.
 
-### Galeria
+<CustomGallery columns="md:grid-cols-4">
+  <a class="glightbox" href="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167694/web/Tramas/el-legado-de-dona-santa/10_eyf32r.jpg">
+    <Image
+      alt="Pedro, Frida y su jardín de flores"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167694/web/Tramas/el-legado-de-dona-santa/10_eyf32r.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a class="glightbox" href="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167694/web/Tramas/el-legado-de-dona-santa/12_kzlmfm.jpg">
+    <Image
+      alt="Pedro, Frida y su jardín de flores"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167694/web/Tramas/el-legado-de-dona-santa/12_kzlmfm.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a class="glightbox" href="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167694/web/Tramas/el-legado-de-dona-santa/11_ilus8h.jpg">
+    <Image
+      alt="Pedro, Frida y su jardín de flores"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167694/web/Tramas/el-legado-de-dona-santa/11_ilus8h.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a class="glightbox" href="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167694/web/Tramas/el-legado-de-dona-santa/13_hti4x2.jpg">
+    <Image
+      alt="Pedro, Frida y su jardín de flores"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167694/web/Tramas/el-legado-de-dona-santa/13_hti4x2.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a class="glightbox" href="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167698/web/Tramas/el-legado-de-dona-santa/16_u6r9an.jpg">
+    <Image
+      alt="Pedro, Frida y su jardín de flores"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167698/web/Tramas/el-legado-de-dona-santa/16_u6r9an.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a class="glightbox" href="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167697/web/Tramas/el-legado-de-dona-santa/15_rjx6mo.jpg">
+    <Image
+      alt="Pedro, Frida y su jardín de flores"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167697/web/Tramas/el-legado-de-dona-santa/15_rjx6mo.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a class="glightbox" href="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167698/web/Tramas/el-legado-de-dona-santa/17_lstgvu.jpg">
+    <Image
+      alt="Pedro, Frida y su jardín de flores"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167698/web/Tramas/el-legado-de-dona-santa/17_lstgvu.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+  <a class="glightbox" href="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167697/web/Tramas/el-legado-de-dona-santa/14_oirsxs.jpg">
+    <Image
+      alt="Pedro, Frida y su jardín de flores"
+      src="https://res.cloudinary.com/djoqdhbiv/image/upload/v1682167697/web/Tramas/el-legado-de-dona-santa/14_oirsxs.jpg"
+      width={1600}
+      height={1280}
+      class="object-cover w-full h-64"
+      format="webp"
+    />
+  </a>
+</CustomGallery>
